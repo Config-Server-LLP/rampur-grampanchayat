@@ -235,9 +235,9 @@ export const translations = {
       nav: {
         home: 'मुख्यपृष्ठ',
         about: 'पंचायत समितीबद्दल',
-        employees: 'कर्मचारी गॅलरी',
-        schemes: 'योजना गॅलरी',
-        talents: 'प्रतिभा गॅलरी',
+        employees: 'कर्मचारी',
+        schemes: 'योजना',
+        talents: 'प्रतिभा',
         map: 'नकाशा',
         contact: 'संपर्क करा',
       },
