@@ -38,8 +38,9 @@ export function About() {
         <div className="w-24 h-1 bg-gradient-to-r from-orange-500 via-white to-green-500 mx-auto"></div>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-        <div>
+      <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
+        {/* Text Content - Aligned to start with image */}
+        <div className="pt-0">
           <p className="text-gray-700 mb-6 leading-relaxed">
             {t.about.para1}
           </p>
@@ -51,6 +52,7 @@ export function About() {
           </p>
         </div>
 
+        {/* Image Section - No changes */}
         <div className="relative">
           <div className="rounded-xl overflow-hidden shadow-2xl">
             <ImageWithFallback

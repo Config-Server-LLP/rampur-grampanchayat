@@ -118,10 +118,10 @@ export const translations = {
     // Talents
     talents: {
       badge: 'Celebrating Excellence',
-      title: 'Recent Talents Gallery',
+      title: 'Recent Talents ',
       description: 'Honoring the exceptional achievements of talented individuals from our community who have made us proud through their remarkable accomplishments.',
       nominate: {
-        title: 'Nominate a Talent',
+        title: 'Rewarded talent',
         description: 'Know someone exceptional? Help us recognize and celebrate their achievements.',
       },
       categories: {

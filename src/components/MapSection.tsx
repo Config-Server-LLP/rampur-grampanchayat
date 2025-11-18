@@ -72,7 +72,7 @@ export function MapSection() {
           <Card className="p-6 border-none shadow-lg hover:shadow-xl transition-shadow">
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <MapPin className="w-6 h-6 text-blue-600" />
+                <MapPin className="w-6 h-6 text-blue-500" />
               </div>
               <div>
                 <h3 className="text-gray-900 mb-2">{t.map.officeAddress}</h3>
