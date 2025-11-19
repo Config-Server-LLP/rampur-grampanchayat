@@ -19,7 +19,7 @@ export function EmployeesGallery() {
       department: t.employees.departments.administration,
       email: 'bdo.rajeshkumar@panchayatsamiti.gov.in',
       phone: '+91 98765 43210',
-      image: 'images/employee1.jpg',
+      image: '/images/employee1.jpg',
       description: 'Responsible for overall administration and development of the block. Oversees implementation of all government schemes and ensures coordination between different departments.',
       experience: '15 years in rural development',
       qualifications: 'M.A. in Public Administration, Diploma in Rural Development'
@@ -31,7 +31,7 @@ export function EmployeesGallery() {
       department: t.employees.departments.documentation,
       email: 'secretary.priyasharma@panchayatsamiti.gov.in',
       phone: '+91 98765 43211',
-      image: 'images/employee2.jpg',
+      image: '/images/employee2.jpg',
       description: 'Manages all official documentation, records maintenance, and administrative correspondence. Ensures proper documentation of meetings and decisions.',
       experience: '12 years in administrative services',
       qualifications: 'B.Com, LLB, Diploma in Office Management'
@@ -43,7 +43,7 @@ export function EmployeesGallery() {
       department: t.employees.departments.agriculture,
       email: 'agriculture.amitverma@panchayatsamiti.gov.in',
       phone: '+91 98765 43212',
-      image: 'images/employee3.jpg',
+      image: '/images/employee3.jpg',
       description: 'Provides technical guidance to farmers, implements agricultural schemes, and promotes modern farming techniques. Conducts training programs for farmers.',
       experience: '10 years in agricultural extension',
       qualifications: 'B.Sc. Agriculture, M.Sc. Agronomy'
@@ -55,7 +55,7 @@ export function EmployeesGallery() {
       department: t.employees.departments.welfare,
       email: 'welfare.sumitdevi@panchayatsamiti.gov.in',
       phone: '+91 98765 43213',
-      image: 'images/employee4.jpeg',
+      image: '/images/employee4.jpeg',
       description: 'Implements social welfare schemes for marginalized communities. Works towards empowerment of women and children through various government programs.',
       experience: '8 years in social work',
       qualifications: 'MSW, Diploma in Child Development'
@@ -67,7 +67,7 @@ export function EmployeesGallery() {
       department: t.employees.departments.infrastructure,
       email: 'engineering.vikrampatel@panchayatsamiti.gov.in',
       phone: '+91 98765 43214',
-      image: 'images/employee5.jpeg',
+      image: '/images/employee5.jpeg',
       description: 'Oversees construction and maintenance of rural infrastructure projects including roads, buildings, and water supply systems.',
       experience: '14 years in civil engineering',
       qualifications: 'B.E. Civil Engineering, PGD in Project Management'
@@ -79,7 +79,7 @@ export function EmployeesGallery() {
       department: t.employees.departments.education,
       email: 'education.ankitdesai@panchayatsamiti.gov.in',
       phone: '+91 98765 43215',
-      image: 'images/employee6.jpeg',
+      image: '/images/employee6.jpeg',
       description: 'Coordinates educational programs, monitors school infrastructure, and implements scholarship schemes for students from rural areas.',
       experience: '9 years in educational administration',
       qualifications: 'M.A. Education, B.Ed.'
@@ -91,7 +91,7 @@ export function EmployeesGallery() {
       department: t.employees.departments.finance,
       email: 'finance.manavigupta@panchayatsamiti.gov.in',
       phone: '+91 98765 43216',
-      image: 'images/employee7.jpeg',
+      image: '/images/employee7.jpeg',
       description: 'Manages financial operations, budgeting, and accounts of the Panchayat Samiti. Ensures proper utilization of funds and maintains financial records.',
       experience: '11 years in financial management',
       qualifications: 'M.Com, CA Inter, Diploma in Financial Management'
@@ -103,7 +103,7 @@ export function EmployeesGallery() {
       department: t.employees.departments.health,
       email: 'health.kavitareddy@panchayatsamiti.gov.in',
       phone: '+91 98765 43217',
-      image: 'images/employee8.jpeg',
+      image: '/images/employee8.jpeg',
       description: 'Coordinates healthcare services, immunization programs, and health awareness campaigns. Monitors functioning of primary health centers.',
       experience: '7 years in public health',
       qualifications: 'B.Sc. Nursing, MPH'
@@ -115,7 +115,7 @@ export function EmployeesGallery() {
       department: t.employees.departments.planning,
       email: 'planning.sanjaymehta@panchayatsamiti.gov.in',
       phone: '+91 98765 43218',
-      image: 'images/employee9.jpeg',
+      image: '/images/employee9.jpeg',
       description: 'Responsible for planning and monitoring of development projects. Prepares annual plans and coordinates with various departments for project implementation.',
       experience: '13 years in development planning',
       qualifications: 'M.A. Economics, PGD in Rural Planning'

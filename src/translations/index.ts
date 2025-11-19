@@ -121,7 +121,7 @@ export const translations = {
       title: 'Recent Talents ',
       description: 'Honoring the exceptional achievements of talented individuals from our community who have made us proud through their remarkable accomplishments.',
       nominate: {
-        title: 'awarded talent',
+        title: 'Awarded Talent',
         description: 'Know someone exceptional? Help us recognize and celebrate their achievements.',
       },
       categories: {
