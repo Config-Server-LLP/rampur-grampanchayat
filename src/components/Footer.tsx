@@ -36,7 +36,7 @@ export function Footer({ onNavigate }: FooterProps) {
               {/* Updated Logo Here */}
               <div className="w-14 h-14 rounded-full overflow-hidden shadow-lg">
                 <img
-                  src="src/components/images/download.ico"
+                  src="images/download.ico"
                   alt="Maharashtra Government Logo"
                   className="w-full h-full object-cover"
                 />
