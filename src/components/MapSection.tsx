@@ -20,7 +20,7 @@ export function MapSection() {
       <div className="grid lg:grid-cols-3 gap-8">
         {/* Map Container */}
         <div className="lg:col-span-2">
-          <Card className="overflow-hidden h-[500px] border-none shadow-xl">
+          <Card className="overflow-hidden h-[600px] border-none shadow-xl">
             <div className="relative w-full h-full bg-gradient-to-br from-blue-100 via-green-50 to-orange-50">
               {/* Map Placeholder - Stylized representation */}
               <div className="absolute inset-0 flex items-center justify-center">
@@ -106,21 +106,21 @@ export function MapSection() {
             </div>
           </Card>
 
-          <Card className="p-6 border-none shadow-lg hover:shadow-xl transition-shadow">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Phone className="w-6 h-6 text-orange-600" />
-              </div>
-              <div>
-                <h3 className="text-gray-900 mb-2">{t.map.contactNumbers}</h3>
-                <div className="text-sm text-gray-600 space-y-1">
-                  <p><span>{t.map.contact.office}</span> +91 (0XXX) 123-4567</p>
-                  <p><span>{t.map.contact.helpline}</span> +91 98765 43210</p>
-                  <p><span>{t.map.contact.fax}</span> +91 (0XXX) 123-4568</p>
-                </div>
-              </div>
-            </div>
-          </Card>
+          <Card className="p-4 border-none shadow-lg hover:shadow-xl transition-shadow"> {/* Increased padding from p-6 to p-8 */}
+  <div className="flex items-start gap-6"> {/* Increased gap from gap-4 to gap-6 */}
+    <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0"> {/* Increased icon size */}
+      <Phone className="w-8 h-10 text-orange-600" /> {/* Increased icon size */}
+    </div>
+    <div className="flex-grow">
+      <h3 className="text-gray-900 mb-4 text-xl font-semibold">{t.map.contactNumbers}</h3> {/* Increased font size and spacing */}
+      <div className="text-base text-gray-600 space-y-3"> {/* Increased font size and spacing */}
+        <p className="text-lg"><span className="font-medium">{t.map.contact.office}</span> +91 (0XXX) 123-4567</p>
+        <p className="text-lg"><span className="font-medium">{t.map.contact.helpline}</span> +91 98765 43210</p>
+        <p className="text-lg"><span className="font-medium">{t.map.contact.fax}</span> +91 (0XXX) 123-4568</p>
+      </div>
+    </div>
+  </div>
+</Card>
         </div>
       </div>
     </div>
