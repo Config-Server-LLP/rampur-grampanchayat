@@ -1,5 +1,5 @@
 import { Card } from "./ui/card";
-import { Award, ChevronLeft, ChevronRight } from "lucide-react";
+import { Award, ChevronLeft, ChevronRight, Info } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { useState } from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
@@ -7,6 +7,8 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 export function TalentsGallery() {
   const { t, language } = useLanguage();
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [selectedTalent, setSelectedTalent] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // English version of talents data
   const talentsEn = [
@@ -27,6 +29,7 @@ export function TalentsGallery() {
         "Shri. Vijay Sahare (Attendant)",
         "Smt. Alka Varkhade (Attendant)",
       ],
+      description: "Responsible for overall administration and management of the Panchayat Samiti office operations and staff coordination.",
     },
     {
       id: 2,
@@ -38,6 +41,7 @@ export function TalentsGallery() {
         "Shri. Shrikant Tungidwar (Senior Assistant)",
         "Shri. Chandrashekhar Padam (Junior Assistant)",
       ],
+      description: "Manages financial transactions, budgeting, and accounting operations for all Panchayat Samiti activities.",
     },
     {
       id: 3,
@@ -54,6 +58,7 @@ export function TalentsGallery() {
         "Shri. Ajay Gajbhiye (Asst. Accountant)",
         "Shri. Abhay Vasanik (Technical Assistant)",
       ],
+      description: "Coordinates with village panchayats and implements various rural development programs and schemes.",
     },
     {
       id: 4,
@@ -67,6 +72,7 @@ export function TalentsGallery() {
         "Shri. Vinod Bhoge (Computer Operator)",
         "Shri. Nishant Yevle (Architect)",
       ],
+      description: "Oversees construction projects, infrastructure development, and maintenance of government buildings.",
     },
     {
       id: 5,
@@ -78,6 +84,7 @@ export function TalentsGallery() {
         "Shri. Padmakar Balapure (Extension Officer Agriculture)",
         "Smt. Kirti Bondre (Extension Officer Agriculture)",
       ],
+      description: "Implements educational schemes and programs for rural development and skill enhancement.",
     },
     {
       id: 6,
@@ -89,6 +96,7 @@ export function TalentsGallery() {
         "Shri. Padmakar Balapure (Extension Officer Agriculture)",
         "Smt. Kirti Bondre (Extension Officer Agriculture)",
       ],
+      description: "Promotes agricultural development, provides technical guidance to farmers, and implements farming schemes.",
     },
     {
       id: 7,
@@ -102,6 +110,7 @@ export function TalentsGallery() {
         "Smt. Ujwala Varthi (Supervisor)",
         "Smt. Smita Lehkar (Supervisor)",
       ],
+      description: "Works for the welfare and empowerment of women and children through various government schemes.",
     },
     {
       id: 8,
@@ -114,6 +123,7 @@ export function TalentsGallery() {
         "Shri. Dinesh Kamdi (Technical Assistant Agriculture)",
         "Shri. Mayur Gharad (Technical Assistant Architecture)",
       ],
+      description: "Implements Mahatma Gandhi National Rural Employment Guarantee Act for rural employment generation.",
     },
     {
       id: 9,
@@ -126,6 +136,7 @@ export function TalentsGallery() {
         "Shri. Ankush Shukla (Division Coordinator)",
         "Smt. Suvarnalata Divte (Division Coordinator)",
       ],
+      description: "Coordinates rural governance initiatives and ensures effective implementation of development programs.",
     },
     {
       id: 10,
@@ -139,6 +150,7 @@ export function TalentsGallery() {
         "Smt. Ujwala Varthi (Supervisor)",
         "Smt. Smita Lehkar (Supervisor)",
       ],
+      description: "Promotes animal husbandry practices and provides veterinary services to rural communities.",
     },
     {
       id: 11,
@@ -148,6 +160,7 @@ export function TalentsGallery() {
         "Shri. Muneshkumar Dupare (Taluka Coordinator)",
         "Shri. Pranay Gajbhiye (Architect)",
       ],
+      description: "Implements Swachh Bharat Mission for cleanliness and sanitation in rural areas.",
     },
   ];
 
@@ -170,6 +183,7 @@ export function TalentsGallery() {
         "श्री. विजय सहारे (परिचर)",
         "श्रीमती. अल्का वरखडे (परिचर)",
       ],
+      description: "पंचायत समिती कार्यालयाच्या एकूण प्रशासन आणि व्यवस्थापनासाठी जबाबदार आणि कर्मचाऱ्यांचे समन्वयन करते.",
     },
     {
       id: 2,
@@ -181,6 +195,7 @@ export function TalentsGallery() {
         "श्री. श्रीकांत तुंगीडवार (वरी. सहाय्यक)",
         "श्री. चंद्रशेखर पदम (कनिष्ठ सहाय्यक)",
       ],
+      description: "सर्व पंचायत समिती क्रियाकलापांसाठी आर्थिक व्यवहार, अर्थसंकल्प आणि लेखा कार्यसंचालन व्यवस्थापित करते.",
     },
     {
       id: 3,
@@ -197,6 +212,7 @@ export function TalentsGallery() {
         "श्री. अजय गजभिये (सहा. लेखा)",
         "श्री. अभय वासनिक (तांत्रिक सहाय्यक)",
       ],
+      description: "ग्रामपंचायतींशी समन्वय साधते आणि विविध ग्रामीण विकास कार्यक्रम आणि योजना अंमलात आणते.",
     },
     {
       id: 4,
@@ -210,6 +226,7 @@ export function TalentsGallery() {
         "श्री. विनोद भोगे (संगणक परी.)",
         "श्री. निशांत येवले (स्थापत्य)",
       ],
+      description: "बांधकाम प्रकल्प, पायाभूत सुविधा विकास आणि सरकारी इमारतींच्या देखभालीवर देखरेख करते.",
     },
     {
       id: 5,
@@ -221,6 +238,7 @@ export function TalentsGallery() {
         "श्री. पद्माकर बाळापुरे (विस्तार अधिकारी कृषी)",
         "श्रीमती किर्ती बोंद्रे (विस्तार अधिकारी कृषी)",
       ],
+      description: "ग्रामीण विकास आणि कौशल्य वर्धनासाठी शैक्षणिक योजना आणि कार्यक्रम अंमलात आणते.",
     },
     {
       id: 6,
@@ -232,6 +250,7 @@ export function TalentsGallery() {
         "श्री. पद्माकर बाळापुरे (विस्तार अधिकारी कृषी)",
         "श्रीमती किर्ती बोंद्रे (विस्तार अधिकारी कृषी)",
       ],
+      description: "कृषी विकासाला प्रोत्साहन देते, शेतकऱ्यांना तांत्रिक मार्गदर्शन प्रदान करते आणि शेती योजना अंमलात आणते.",
     },
     {
       id: 7,
@@ -245,6 +264,7 @@ export function TalentsGallery() {
         "श्रीमती. उज्वला वरठी (पर्यवेक्षिका)",
         "श्रीमती. स्मिता लेहकर (पर्यवेक्षिका)",
       ],
+      description: "विविध सरकारी योजनांद्वारे महिला आणि मुलांच्या कल्याण आणि सक्षमीकरणासाठी काम करते.",
     },
     {
       id: 8,
@@ -257,6 +277,7 @@ export function TalentsGallery() {
         "श्री. दिनेश कामडी (तांत्रिक सहा. कृषी)",
         "श्री. मयूर घारड (तांत्रिक सहा. स्थापत्य)",
       ],
+      description: "ग्रामीण रोजगार निर्मितीसाठी महात्मा गांधी राष्ट्रीय ग्रामीण रोजगार हमी कायदा अंमलात आणते.",
     },
     {
       id: 9,
@@ -269,6 +290,7 @@ export function TalentsGallery() {
         "श्री. अंकुश शुक्ला (प्रभाग समन्वयक)",
         "श्रीमती. सुवर्णलता दिवटे (प्रभाग समन्वयक)",
       ],
+      description: "ग्रामीण शासन उपक्रमांचे समन्वयन करते आणि विकास कार्यक्रमांची प्रभावी अंमलबजावणी सुनिश्चित करते.",
     },
     {
       id: 10,
@@ -282,6 +304,7 @@ export function TalentsGallery() {
         "श्रीमती. उज्वला वरठी (पर्यवेक्षिका)",
         "श्रीमती. स्मिता लेहकर (पर्यवेक्षिका)",
       ],
+      description: "पशुसंवर्धन पद्धतींना प्रोत्साहन देते आणि ग्रामीण समुदायांना पशुवैद्यकीय सेवा पुरवते.",
     },
     {
       id: 11,
@@ -291,6 +314,7 @@ export function TalentsGallery() {
         "श्री. मुनेशकुमार दुपारे (तालुका समन्वयक)",
         "श्री. प्रणय गजभिये (स्थापत्य)",
       ],
+      description: "ग्रामीण भागात स्वच्छता आणि स्वच्छतासाठी स्वच्छ भारत मिशन अंमलात आणते.",
     },
   ];
 
@@ -301,20 +325,54 @@ export function TalentsGallery() {
   const totalSlides = Math.ceil(talents.length / cardsPerSlide);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % totalSlides);
+    if (totalSlides > 1) {
+      setCurrentSlide((prev) => (prev + 1) % totalSlides);
+    }
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+    if (totalSlides > 1) {
+      setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+    }
   };
 
   const getVisibleTalents = () => {
     const startIndex = currentSlide * cardsPerSlide;
-    return talents.slice(startIndex, startIndex + cardsPerSlide);
+    const visibleTalents = talents.slice(startIndex, startIndex + cardsPerSlide);
+    
+    // Fill empty slots with placeholder cards if needed
+    const emptySlots = cardsPerSlide - visibleTalents.length;
+    if (emptySlots > 0) {
+      return [
+        ...visibleTalents,
+        ...Array(emptySlots).fill(null).map((_, index) => ({
+          id: `empty-${index}`,
+          isEmpty: true
+        }))
+      ];
+    }
+    
+    return visibleTalents;
   };
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
+  };
+
+  const openTalentModal = (talent) => {
+    setSelectedTalent(talent);
+    setIsModalOpen(true);
+  };
+
+  const closeTalentModal = () => {
+    setIsModalOpen(false);
+    setSelectedTalent(null);
+  };
+
+  // Function to truncate long text
+  const truncateText = (text, maxLength) => {
+    if (!text || text.length <= maxLength) return text;
+    return text.substring(0, maxLength) + '...';
   };
 
   return (
@@ -333,7 +391,7 @@ export function TalentsGallery() {
       {/* Slider */}
       <div className="relative">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative">
-          {/* Left Arrow */}
+          {/* Left Arrow - Only show if there are multiple slides */}
           {totalSlides > 1 && (
             <button
               onClick={prevSlide}
@@ -346,38 +404,69 @@ export function TalentsGallery() {
           )}
 
           {/* Cards */}
-          {getVisibleTalents().map((talent) => (
-            <Card
-              key={talent.id}
-              className="rounded-xl shadow-md border p-0 overflow-hidden bg-white hover:shadow-xl transition-all duration-300 group"
-            >
-              <div className="w-full flex items-center justify-center py-4">
-                <div className="w-48 h-48 flex items-center justify-center">
-                  <ImageWithFallback
-                    src={talent.image}
-                    alt={talent.name}
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
-                    fallbackSrc="images/default.png"
-                  />
-                </div>
+          {getVisibleTalents().map((talent, index) => (
+            talent.isEmpty ? (
+              // Empty placeholder card
+              <div key={talent.id} className="opacity-0 pointer-events-none">
+                <Card className="rounded-xl shadow-md border p-0 overflow-hidden bg-white h-[400px]" />
               </div>
+            ) : (
+              <Card
+                key={talent.id}
+                className="rounded-xl shadow-md border p-0 overflow-hidden bg-white hover:shadow-xl transition-all duration-300 group flex flex-col h-[480px]"
+              >
+                <div className="w-full flex items-center justify-center py-4">
+                  <div className="w-48 h-48 flex items-center justify-center">
+                    <ImageWithFallback
+                      src={talent.image}
+                      alt={talent.name}
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                      fallbackSrc="images/default.png"
+                    />
+                  </div>
+                </div>
 
-              <h3 className="text-center text-xl font-semibold text-gray-900 py-4 border-b">
-                {talent.name}
-              </h3>
+                <h3 className="text-center text-xl font-semibold text-gray-900 py-4 border-b">
+                  {talent.name}
+                </h3>
 
-              <ul className="px-6 py-4 text-gray-800 text-sm space-y-1">
-                {talent.officers?.map((officer, idx) => (
-                  <li key={idx} className="flex items-start gap-6">
-                    <span className="text-green-600 text-lg">›</span>
-                    <span className="flex-1">{officer}</span>
-                  </li>
-                ))}
-              </ul>
-            </Card>
+                <div className="p-6 flex flex-col flex-grow">
+                  {/* Description with Read More */}
+                  <div className="mb-4 flex-grow">
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      {truncateText(talent.description, 100)}
+                    </p>
+                    {talent.description && talent.description.length > 100 && (
+                      <button
+                        onClick={() => openTalentModal(talent)}
+                        className="text-orange-600 hover:text-orange-800 text-sm font-medium mt-2 inline-flex items-center gap-1"
+                      >
+                        {language === 'mr' ? 'अधिक वाचा' : 'Read More'}
+                        <Info className="w-3 h-3" />
+                      </button>
+                    )}
+                  </div>
+
+                  {/* Officers List */}
+                  <ul className="text-gray-800 text-sm space-y-1 flex-grow">
+                    {talent.officers?.slice(0, 3).map((officer, idx) => (
+                      <li key={idx} className="flex items-start gap-6">
+                        <span className="text-green-600 text-lg">›</span>
+                        <span className="flex-1 text-xs">{officer}</span>
+                      </li>
+                    ))}
+                    {talent.officers && talent.officers.length > 3 && (
+                      <li className="text-orange-600 text-xs font-medium mt-2">
+                        + {talent.officers.length - 3} {language === 'mr' ? 'अधिक' : 'more'}...
+                      </li>
+                    )}
+                  </ul>
+                </div>
+              </Card>
+            )
           ))}
 
-          {/* Right Arrow */}
+          {/* Right Arrow - Only show if there are multiple slides */}
           {totalSlides > 1 && (
             <button
               onClick={nextSlide}
@@ -390,7 +479,7 @@ export function TalentsGallery() {
           )}
         </div>
 
-        {/* Slide Indicators */}
+        {/* Slide Indicators - Only show if there are multiple slides */}
         {totalSlides > 1 && (
           <div className="flex justify-center mt-8 space-x-3">
             {Array.from({ length: totalSlides }).map((_, index) => (
@@ -408,6 +497,84 @@ export function TalentsGallery() {
           </div>
         )}
       </div>
+
+      {/* Talent Detail Modal */}
+      {isModalOpen && selectedTalent && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            {/* Modal Header */}
+            <div className="sticky top-0 bg-white border-b border-gray-200 p-6 rounded-t-2xl">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">
+                    {selectedTalent.name}
+                  </h3>
+                </div>
+                <button
+                  onClick={closeTalentModal}
+                  className="p-2 hover:bg-gray-100 rounded-full transition-colors duration-200"
+                >
+                  <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            {/* Modal Content */}
+            <div className="p-6">
+              <div className="flex flex-col md:flex-row gap-6 mb-6">
+                <div className="flex-shrink-0">
+                  <div className="w-32 h-32 rounded-lg overflow-hidden bg-gradient-to-br from-orange-500 to-orange-700">
+                    <ImageWithFallback
+                      src={selectedTalent.image}
+                      alt={selectedTalent.name}
+                      className="w-full h-full object-cover"
+                      fallbackSrc="images/default.png"
+                    />
+                  </div>
+                </div>
+                <div className="flex-grow">
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-gray-900 mb-2">
+                      {language === 'mr' ? 'विभागाचे वर्णन' : 'Department Description'}
+                    </h4>
+                    <p className="text-gray-700 leading-relaxed">
+                      {selectedTalent.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-t pt-6">
+                <h4 className="font-semibold text-gray-900 mb-4">
+                  {language === 'mr' ? 'कर्मचारी तपशील' : 'Staff Details'}
+                </h4>
+                <ul className="space-y-2">
+                  {selectedTalent.officers?.map((officer, idx) => (
+                    <li key={idx} className="flex items-start gap-3 py-2 border-b border-gray-100 last:border-b-0">
+                      <span className="text-green-600 text-lg mt-0.5">›</span>
+                      <span className="text-gray-700">{officer}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Modal Footer */}
+            <div className="sticky bottom-0 bg-white border-t border-gray-200 p-6 rounded-b-2xl">
+              <div className="flex justify-end">
+                <button
+                  onClick={closeTalentModal}
+                  className="px-6 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors duration-200 font-medium"
+                >
+                  {language === 'mr' ? 'बंद करा' : 'Close'}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Nominate Section */}
       <div className="mt-12 text-center">

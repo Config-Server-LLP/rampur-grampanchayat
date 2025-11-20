@@ -1,9 +1,9 @@
 export const translations = {
   en: {
-    // Header
+     // Header
     header: {
-      title: 'Panchayat Samiti',
-      subtitle: 'Serving the Community',
+      title: 'Panchayat Samiti Rajura',
+      subtitle: 'Serving the Community of Rajura',
       nav: {
         home: 'Home',
         about: 'About',
@@ -18,8 +18,9 @@ export const translations = {
     // Hero
     hero: {
       badge: 'Government of India',
-      title: 'Welcome to Panchayat Samiti',
-      description: 'Committed to rural development, empowerment, and sustainable growth of our community through transparent governance and inclusive development programs.',
+      title: 'Welcome to Panchayat Samiti Rajura',
+      description:
+        'Dedicated to rural development, social welfare, and inclusive growth of Rajura through transparent governance and citizen-centric initiatives.',
     },
     
     // Quick Links
@@ -42,29 +43,36 @@ export const translations = {
       },
     },
     
-    // About
+    // ⭐ UPDATED ABOUT SECTION (ENGLISH)
     about: {
       badge: 'About Us',
-      title: 'About Panchayat Samiti',
-      para1: 'The Panchayat Samiti serves as an intermediate tier in the three-tier Panchayati Raj system, playing a crucial role in rural local self-government. Our mission is to ensure effective implementation of development schemes and welfare programs at the grassroots level.',
-      para2: 'We work tirelessly to bridge the gap between government initiatives and community needs, ensuring that every citizen has access to essential services, opportunities for growth, and a voice in the democratic process.',
-      para3: 'Through participatory planning, transparent execution, and continuous monitoring, we strive to build a prosperous, inclusive, and sustainable future for our rural communities.',
+      title: 'About Panchayat Samiti Rajura',
+      para1:
+        'Panchayat Samiti Rajura is a key administrative body under the Panchayati Raj system in Chandrapur district. We are committed to strengthening rural governance, ensuring effective delivery of government schemes, and supporting the holistic development of all villages within the Rajura block.',
+      para2:
+        'Our mission is to empower local communities by improving essential services, promoting agricultural advancement, enhancing infrastructure, and bridging the gap between government policies and grassroots needs through transparency and accountability.',
+      para3:
+        'With a focus on sustainable and inclusive development, Panchayat Samiti Rajura aims to create better opportunities, strengthen public welfare systems, and build a progressive rural environment where every citizen can participate in the developmental journey.',
       features: {
         governance: {
-          title: 'Good Governance',
-          description: 'Ensuring transparent and accountable administration for all citizens',
+          title: 'Transparent Governance',
+          description:
+            'Ensuring accountable, citizen-friendly, and efficient administration for rural development.',
         },
         development: {
-          title: 'Rural Development',
-          description: 'Implementing programs for sustainable growth and infrastructure',
+          title: 'Block-Level Development',
+          description:
+            'Implementing schemes related to roads, water supply, sanitation, agriculture, and digital empowerment.',
         },
         empowerment: {
-          title: 'Community Empowerment',
-          description: 'Fostering participation and self-reliance in local communities',
+          title: 'Community Participation',
+          description:
+            'Encouraging Gram Sabhas, self-help groups, youth engagement, and public involvement in local planning.',
         },
         welfare: {
-          title: 'Social Welfare',
-          description: 'Promoting health, education, and welfare schemes for all',
+          title: 'Public Welfare',
+          description:
+            'Promoting education, healthcare, social welfare schemes, and inclusive growth for all citizens.',
         },
       },
     },
@@ -231,8 +239,8 @@ export const translations = {
   mr: {
     // Header
     header: {
-      title: 'पंचायत समिती',
-      subtitle: 'समाजाची सेवा',
+      title: 'पंचायत समिती राजूरा',
+      subtitle: 'राजूरा समुदायाची सेवा',
       nav: {
         home: 'मुख्यपृष्ठ',
         about: 'पंचायत समितीबद्दल',
@@ -243,14 +251,15 @@ export const translations = {
         contact: 'संपर्क करा',
       },
     },
-    
+
     // Hero
     hero: {
       badge: 'भारत सरकार',
-      title: 'पंचायत समितीमध्ये आपले स्वागत आहे',
-      description: 'पारदर्शक शासन आणि समावेशक विकास कार्यक्रमांद्वारे आमच्या समुदायाच्या ग्रामीण विकास, सशक्तीकरण आणि शाश्वत वाढीसाठी वचनबद्ध.',
+      title: 'पंचायत समिती राजूरा मध्ये आपले स्वागत आहे',
+      description:
+        'पारदर्शक शासन, नागरिक-केंद्रित उपक्रम आणि ग्रामीण विकासाच्या दिशेने राजूरा येथे शाश्वत व सर्वसमावेशक प्रगतीसाठी वचनबद्ध.',
     },
-    
+
     // Quick Links
     quickLinks: {
       schemes: {
@@ -270,30 +279,37 @@ export const translations = {
         description: 'आमच्या कार्यालयाशी संपर्क साधा',
       },
     },
-    
-    // About
+
+    // ⭐ UPDATED ABOUT SECTION (MARATHI)
     about: {
       badge: 'आमच्याबद्दल',
-      title: 'पंचायत समितीबद्दल',
-      para1: 'पंचायत समिती तीन-स्तरीय पंचायती राज व्यवस्थेत मध्यवर्ती स्तर म्हणून काम करते आणि ग्रामीण स्थानिक स्वराज्य संस्थेत महत्त्वपूर्ण भूमिका बजावते. तळागाळातील विकास योजना आणि कल्याणकारी कार्यक्रमांची प्रभावी अंमलबजावणी सुनिश्चित करणे हे आमचे ध्येय आहे.',
-      para2: 'आम्ही सरकारी उपक्रम आणि समुदायाच्या गरजा यांच्यातील अंतर भरून काढण्यासाठी अथक प्रयत्न करतो, प्रत्येक नागरिकाला आवश्यक सेवा, वाढीच्या संधी आणि लोकशाही प्रक्रियेत आवाज उपलब्ध असल्याची खात्री करतो.',
-      para3: 'सहभागी नियोजन, पारदर्शक अंमलबजावणी आणि सतत देखरेखीद्वारे आम्ही आमच्या ग्रामीण समुदायांसाठी समृद्ध, समावेशक आणि टिकाऊ भविष्य घडवण्याचा प्रयत्न करतो.',
+      title: 'पंचायत समिती राजूरा',
+      para1:
+        'पंचायत समिती राजूरा ही चंद्रपूर जिल्ह्यातील पंचायती राज व्यवस्थेतील एक महत्त्वाची संस्था आहे. राजूरा खंडातील सर्व ग्रामपंचायतींमध्ये प्रभावी शासन, विकास योजना आणि शासकीय सेवांची अंमलबजावणी सुनिश्चित करण्यासाठी आम्ही कटिबद्ध आहोत.',
+      para2:
+        'आमचे उद्दिष्ट ग्रामीण पायाभूत सुविधा मजबूत करणे, कृषी प्रगतीस चालना देणे, शिक्षण व आरोग्य सुविधांचा विकास करणे आणि शासकीय धोरणे व लोकांच्या गरजा यांच्यातील अंतर पारदर्शकतेने व उत्तरदायित्वाने भरून काढणे आहे.',
+      para3:
+        'शाश्वत व सर्वसमावेशक विकासाच्या दिशेने, पंचायत समिती राजूरा नागरिकांना संधी, सुविधा आणि उत्तम जीवनस्तर प्रदान करण्यासाठी सतत प्रयत्नशील आहे.',
       features: {
         governance: {
-          title: 'चांगले शासन',
-          description: 'सर्व नागरिकांसाठी पारदर्शक आणि जबाबदार प्रशासन सुनिश्चित करणे',
+          title: 'पारदर्शक शासन',
+          description:
+            'उत्तरदायित्वपूर्ण, नागरिक-केंद्रित आणि कार्यक्षम प्रशासनाची अंमलबजावणी.',
         },
         development: {
-          title: 'ग्रामीण विकास',
-          description: 'शाश्वत वाढ आणि पायाभूत सुविधांसाठी कार्यक्रम राबवणे',
+          title: 'खंडस्तरीय विकास',
+          description:
+            'रस्ते, पाणीपुरवठा, स्वच्छता, कृषी आणि डिजिटल सक्षमीकरणाशी संबंधित प्रकल्पांची प्रभावी अंमलबजावणी.',
         },
         empowerment: {
-          title: 'समुदाय सशक्तीकरण',
-          description: 'स्थानिक समुदायांमध्ये सहभाग आणि आत्मनिर्भरता वाढवणे',
+          title: 'समुदाय सहभाग',
+          description:
+            'ग्रामसभा, स्वयं-साहाय्य गट, युवकांचा सहभाग आणि स्थानिक नियोजनात सक्रिय भूमिका प्रोत्साहित करणे.',
         },
         welfare: {
           title: 'समाज कल्याण',
-          description: 'सर्वांसाठी आरोग्य, शिक्षण आणि कल्याण योजनांना प्रोत्साहन देणे',
+          description:
+            'शिक्षण, आरोग्य, सामाजिक संरक्षण योजना आणि सर्व नागरिकांच्या विकासासाठी उपयुक्त कार्यक्रम.',
         },
       },
     },
