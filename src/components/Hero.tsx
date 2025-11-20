@@ -9,11 +9,11 @@ export function Hero() {
   // Array of hero images from public folder
   const heroImages = [
     {
-      src: "images/hero1.jpg",
+      src: "images/Rajura.jpg",
       alt: "Village community development"
     },
     {
-      src: "images/hero2.jpg",
+      src: "images/Panchayat.jpg",
       alt: "Indian farming"
     },
     // {
