@@ -30,51 +30,59 @@ export function About() {
     },
   ];
 
-  // Extended content for the modal - with proper structure
+  // UPDATED MODAL CONTENT FOR RAJURA – ENGLISH & MARATHI
   const extendedContent = {
     en: [
       {
-        title: "Three-Tier Governance Structure",
-        content: "The Panchayat Samiti serves as an intermediate tier in the three-tier Panchayati Raj system, playing a crucial role in rural local self-government. Our mission is to ensure effective implementation of development schemes and welfare programs at the grassroots level."
+        title: "Role of Panchayat Samiti Rajura",
+        content:
+          "Panchayat Samiti Rajura plays a vital administrative and developmental role for villages in Rajura block. It ensures planning, supervision, and implementation of government schemes for rural development."
       },
       {
-        title: "Bridging Government and Community",
-        content: "We work tirelessly to bridge the gap between government initiatives and community needs, ensuring that every citizen has access to essential services, opportunities for growth, and a voice in the democratic process."
+        title: "Link Between Zilla Parishad & Gram Panchayat",
+        content:
+          "Rajura Panchayat Samiti works as an important coordination bridge between Zilla Parishad Chandrapur and all Gram Panchayats of Rajura taluka, ensuring smooth execution of development initiatives."
       },
       {
-        title: "Sustainable Development Goals",
-        content: "Through participatory planning, transparent execution, and continuous monitoring, we strive to build a prosperous, inclusive, and sustainable future for our rural communities."
+        title: "Focus on Rural Development",
+        content:
+          "Major development programs include agriculture, health services, rural roads, water supply, sanitation, education, livelihood missions, and welfare schemes for women, children, and weaker sections."
       },
       {
-        title: "Key Responsibilities",
-        content: "The Samiti is responsible for planning and execution of development projects, monitoring various government schemes, and addressing the needs of multiple villages within our block."
+        title: "Administrative Responsibilities",
+        content:
+          "The Samiti includes multiple departments such as administration, education, finance, agriculture, health, construction, water supply, social welfare, and livelihood missions. Each works under the guidance of the Block Development Officer (BDO)."
       }
     ],
     mr: [
       {
-        title: "तीन-स्तरीय शासन रचना",
-        content: "पंचायत समिती तीन-स्तरीय पंचायती राज व्यवस्थेत मध्यवर्ती स्तर म्हणून काम करते आणि ग्रामीण स्थानिक स्वराज्य संस्थेत महत्त्वपूर्ण भूमिका बजावते."
+        title: "पंचायत समिती राजुराची भूमिका",
+        content:
+          "पंचायत समिती राजुरा ही तालुक्यातील ग्रामीण भागाच्या विकासासाठी योजना आखणे, देखरेख करणे आणि विविध शासकीय योजनांची अंमलबजावणी करण्याची महत्त्वपूर्ण जबाबदारी पार पाडते."
       },
       {
-        title: "सरकार आणि समुदाय यांच्यातील दुवा",
-        content: "आम्ही सरकारी उपक्रम आणि समुदायाच्या गरजा यांच्यातील अंतर भरून काढण्यासाठी अथक प्रयत्न करतो, प्रत्येक नागरिकाला आवश्यक सेवा, वाढीच्या संधी उपलब्ध असल्याची खात्री करतो."
+        title: "जिल्हा परिषद आणि ग्रामपंचायत यांच्यातील दुवा",
+        content:
+          "राजुरा पंचायत समिती ही चंद्रपूर जिल्हा परिषद आणि तालुक्यातील सर्व ग्रामपंचायती यांच्यातील प्रमुख समन्वयक संस्था आहे, जी विकासाचे काम प्रभावीपणे राबवते."
       },
       {
-        title: "शाश्वत विकास उद्दिष्टे",
-        content: "सहभागी नियोजन, पारदर्शक अंमलबजावणी आणि सतत देखरेखीद्वारे आम्ही आमच्या ग्रामीण समुदायांसाठी समृद्ध, समावेशक आणि टिकाऊ भविष्य घडवण्याचा प्रयत्न करतो."
+        title: "ग्रामीण विकासावर लक्ष",
+        content:
+          "शेती, आरोग्य सेवा, ग्रामीण रस्ते, पाणीपुरवठा, स्वच्छता, शिक्षण, उपजीविका मिशन, महिला व बाल विकास आणि समाजकल्याण यांसारख्या अनेक योजनांची अंमलबजावणी राजुरा समितीच्या माध्यमातून केली जाते."
       },
       {
-        title: "मुख्य जबाबदाऱ्या",
-        content: "समिती विकास प्रकल्पांच्या नियोजन आणि अंमलबजावणीसाठी जबाबदार आहे, विविध सरकारी योजनांचे मॉनिटरिंग करते आणि खंडातील अनेक गावांच्या गरजा पूर्ण करते."
+        title: "प्रशासकीय जबाबदाऱ्या",
+        content:
+          "समितीमध्ये प्रशासन, शिक्षण, वित्त, कृषी, आरोग्य, बांधकाम, जलपुरवठा, समाजकल्याण, महिला व बाल विकास आणि ग्रामीण जीवनोन्नती अभियान असे विविध विभाग कार्यरत आहेत. हे सर्व विभाग गटविकास अधिकाऱ्यांच्या मार्गदर्शनाखाली काम करतात."
       }
     ]
   };
 
-  // Get modal content based on current language
   const modalContent = extendedContent[currentLanguage] || extendedContent.en;
 
   return (
     <div className="container mx-auto px-4">
+      {/* Header */}
       <div className="text-center mb-12">
         <div className="inline-block px-4 py-1 bg-blue-50 text-blue-600 rounded-full mb-4">
           <span className="text-sm">{t.about.badge}</span>
@@ -83,35 +91,29 @@ export function About() {
         <div className="w-24 h-1 bg-gradient-to-r from-orange-500 via-white to-green-500 mx-auto"></div>
       </div>
 
+      {/* Main Content */}
       <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
-        {/* Text Content - Aligned to start with image */}
         <div className="space-y-6">
-          <p className="text-gray-700 leading-relaxed">
-            {t.about.para1}
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            {t.about.para2}
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            {t.about.para3}
-          </p>
-          
-          {/* More Details Link - Updated to blue text with bold */}
+          <p className="text-gray-700 leading-relaxed">{t.about.para1}</p>
+          <p className="text-gray-700 leading-relaxed">{t.about.para2}</p>
+          <p className="text-gray-700 leading-relaxed">{t.about.para3}</p>
+
+          {/* More Details Button */}
           <button
             onClick={() => setIsModalOpen(true)}
             className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors duration-200 font-bold text-lg underline decoration-2 underline-offset-4"
           >
             <Info className="w-5 h-5" />
-            {currentLanguage === 'mr' ? 'अधिक माहिती' : 'More Details'}
+            {currentLanguage === "mr" ? "अधिक माहिती" : "More Details"}
           </button>
         </div>
 
-        {/* Image Section */}
+        {/* Image */}
         <div className="relative">
           <div className="rounded-xl overflow-hidden shadow-2xl">
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1709967884183-7ffa9d168508?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnb3Zlcm5tZW50JTIwYnVpbGRpbmclMjBpbmRpYXxlbnwxfHx8fDE3NjMzNTk2Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080"
-              alt="Government building"
+              src="https://images.unsplash.com/photo-1709967884183-7ffa9d168508?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+              alt="Panchayat Samiti Rajura Building"
               className="w-full h-[400px] object-cover"
             />
           </div>
@@ -119,7 +121,7 @@ export function About() {
         </div>
       </div>
 
-      {/* Features Grid */}
+      {/* Features */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {features.map((feature, index) => {
           const Icon = feature.icon;
@@ -132,24 +134,24 @@ export function About() {
                 <Icon className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-gray-900 mb-2">{feature.title}</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">{feature.description}</p>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                {feature.description}
+              </p>
             </div>
           );
         })}
       </div>
 
-      {/* Updated Smaller Modal/Popup */}
+      {/* Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-xl max-w-md w-full max-h-[80vh] overflow-y-auto shadow-2xl">
             {/* Modal Header */}
             <div className="sticky top-0 bg-white border-b border-gray-200 p-4 rounded-t-xl">
               <div className="flex items-center justify-between">
-                <div>
-                  <h3 className="text-lg font-bold text-gray-900">
-                    {currentLanguage === 'mr' ? 'तपशीलवार माहिती' : 'Detailed Information'}
-                  </h3>
-                </div>
+                <h3 className="text-lg font-bold text-gray-900">
+                  {currentLanguage === "mr" ? "तपशीलवार माहिती" : "Detailed Information"}
+                </h3>
                 <button
                   onClick={() => setIsModalOpen(false)}
                   className="p-1 hover:bg-gray-100 rounded-full transition-colors duration-200"
@@ -159,10 +161,10 @@ export function About() {
               </div>
             </div>
 
-            {/* Modal Content */}
+            {/* Modal Body */}
             <div className="p-4 space-y-4">
-              {modalContent && modalContent.map((section, index) => (
-                <div key={index} className="border-l-4 border-blue-500 pl-3">
+              {modalContent.map((section, i) => (
+                <div key={i} className="border-l-4 border-blue-500 pl-3">
                   <h4 className="text-base font-semibold text-gray-900 mb-1">
                     {section.title}
                   </h4>
@@ -180,7 +182,7 @@ export function About() {
                   onClick={() => setIsModalOpen(false)}
                   className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 text-sm font-medium"
                 >
-                  {currentLanguage === 'mr' ? 'बंद करा' : 'Close'}
+                  {currentLanguage === "mr" ? "बंद करा" : "Close"}
                 </button>
               </div>
             </div>
