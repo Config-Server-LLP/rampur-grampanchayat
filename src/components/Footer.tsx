@@ -127,11 +127,11 @@ export function Footer({ onNavigate }: FooterProps) {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300 text-sm">+91 (0XXX) 123-4567</span>
+                <span className="text-gray-300 text-sm">+91 07172-22124</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-orange-400 flex-shrink-0" />
-                <span className="text-gray-300 text-sm">contact@panchayatsamiti.gov.in</span>
+                <span className="text-gray-300 text-sm">bdo.rajura@maharashtra.gov.in</span>
               </li>
             </ul>
           </div>

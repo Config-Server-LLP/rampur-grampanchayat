@@ -156,10 +156,10 @@ export const translations = {
       officeHours: 'Office Hours',
       contactNumbers: 'Contact Numbers',
       address: {
-        line1: 'Panchayat Samiti Office',
+        line1: 'Panchayat Samiti Office, Rajura',
         line2: 'Block Development Office',
-        line3: 'District Headquarters',
-        line4: 'State, PIN - 123456',
+        line3: 'Chandrapur District, Maharashtra',
+        line4: 'Pincode: 442905',
         line5: 'India',
       },
       hours: {
@@ -212,9 +212,9 @@ export const translations = {
       grievanceButton: 'Visit Grievance Portal →',
     },
     
-    // Footer
+     // Footer - UPDATED FOR RAJURA
     footer: {
-      description: 'Committed to transparent governance, rural development, and community empowerment through effective implementation of welfare schemes.',
+      description: 'Rajura Panchayat Samiti is a local self-government body serving Rajura taluka in Chandrapur district. Committed to rural development, social welfare and transparent governance.',
       quickLinks: 'Quick Links',
       importantLinks: 'Important Links',
       contactInfo: 'Contact Info',
@@ -231,8 +231,8 @@ export const translations = {
         terms: 'Terms of Service',
         sitemap: 'Sitemap',
       },
-      copyright: 'Copyright @2025 PSPARSEONI | Design & Development by Config Server LLP',
-      disclaimer: 'This is a government website. Content owned and maintained by respective departments.',
+      copyright: 'Copyright © 2025 Panchayat Samiti Rajura | All Rights Reserved',
+      disclaimer: 'This is an official government website. Content owned and maintained by Panchayat Samiti Rajura.',
     },
   },
   
@@ -394,10 +394,10 @@ export const translations = {
       officeHours: 'कार्यालयीन वेळ',
       contactNumbers: 'संपर्क क्रमांक',
       address: {
-        line1: 'पंचायत समिती कार्यालय',
+        line1: 'पंचायत समिती कार्यालय, राजूरा',
         line2: 'विकास खंड कार्यालय',
-        line3: 'जिल्हा मुख्यालय',
-        line4: 'राज्य, पिन - 123456',
+        line3: 'चंद्रपूर जिल्हा, महाराष्ट्र',
+        line4: 'पिन कोड: ४४२९०५',
         line5: 'भारत',
       },
       hours: {
@@ -450,9 +450,9 @@ export const translations = {
       grievanceButton: 'तक्रार पोर्टलला भेट द्या →',
     },
     
-    // Footer
+    // Footer - UPDATED FOR RAJURA
     footer: {
-      description: 'कल्याणकारी योजनांच्या प्रभावी अंमलबजावणीद्वारे पारदर्शक शासन, ग्रामीण विकास आणि समुदाय सशक्तीकरणासाठी वचनबद्ध.',
+      description: 'राजूरा पंचायत समिती ही चंद्रपूर जिल्ह्यातील राजूरा तालुक्यासाठी कार्यरत असलेली स्थानिक स्वराज्य संस्था आहे. ग्रामीण विकास, सामाजिक कल्याण आणि पारदर्शक शासनासाठी वचनबद्ध.',
       quickLinks: 'द्रुत दुवे',
       importantLinks: 'महत्त्वाचे दुवे',
       contactInfo: 'संपर्क माहिती',
@@ -469,9 +469,9 @@ export const translations = {
         terms: 'सेवा अटी',
         sitemap: 'साइट नकाशा',
       },
-      copyright: 'प्रताधिकार @2025 PSPARSEONI | डिझाइन आणि विकास कॉन्फिग सर्व्हर एलएलपी द्वारे',
-      disclaimer: 'ही सरकारी वेबसाइट आहे. सामग्री संबंधित विभागांद्वारे मालकीची आणि राखलेली आहे.',
+      copyright: 'प्रताधिकार © २०२५ पंचायत समिती राजूरा | सर्व हक्क राखीव',
+      disclaimer: 'ही अधिकृत सरकारी वेबसाइट आहे. सामग्री पंचायत समिती राजूरा द्वारे मालकीची आणि राखलेली आहे.',
     },
-    
   },
+
 };

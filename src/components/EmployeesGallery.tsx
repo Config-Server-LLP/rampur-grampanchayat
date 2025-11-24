@@ -4,13 +4,13 @@ import { Badge } from './ui/badge';
 import { Mail, Phone, ChevronLeft, ChevronRight, X, Info } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-
+ 
 export function EmployeesGallery() {
   const { t, language } = useLanguage(); // Get both t and language from context
   const [currentSlide, setCurrentSlide] = useState(0);
   const [selectedEmployee, setSelectedEmployee] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+ 
   const employees = [
     {
       id: 1,
@@ -20,10 +20,10 @@ export function EmployeesGallery() {
       email: 'bdo.rajeshkumar@panchayatsamiti.gov.in',
       phone: '+91 98765 43210',
       image: 'images/employee1.jpg',
-      description: language === 'mr' 
+      description: language === 'mr'
         ? 'ब्लॉकच्या एकूण प्रशासन आणि विकासासाठी जबाबदार. सर्व सरकारी योजनांच्या अंमलबजावणीवर देखरेख करतो आणि विविध विभागांमधील समन्वय सुनिश्चित करतो.'
         : 'Responsible for overall administration and development of the block. Oversees implementation of all government schemes and ensures coordination between different departments.',
-      experience: language === 'mr' 
+      experience: language === 'mr'
         ? 'ग्रामीण विकासात 15 वर्षे अनुभव'
         : '15 years in rural development',
       qualifications: language === 'mr'
@@ -175,39 +175,39 @@ export function EmployeesGallery() {
         : 'M.A. Economics, PGD in Rural Planning'
     },
   ];
-
+ 
   const cardsPerSlide = 4;
   const totalSlides = Math.ceil(employees.length / cardsPerSlide);
-
+ 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % totalSlides);
   };
-
+ 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
   };
-
+ 
   const getVisibleEmployees = () => {
     const startIndex = currentSlide * cardsPerSlide;
     return employees.slice(startIndex, startIndex + cardsPerSlide);
   };
-
+ 
   const openEmployeeModal = (employee) => {
     setSelectedEmployee(employee);
     setIsModalOpen(true);
   };
-
+ 
   const closeEmployeeModal = () => {
     setIsModalOpen(false);
     setSelectedEmployee(null);
   };
-
+ 
   // Function to truncate long text
   const truncateText = (text, maxLength) => {
     if (text.length <= maxLength) return text;
     return text.substring(0, maxLength) + '...';
   };
-
+ 
   return (
     <div className="container mx-auto px-4">
       <div className="text-center mb-12">
@@ -219,7 +219,7 @@ export function EmployeesGallery() {
           {t.employees.description}
         </p>
       </div>
-
+ 
       {/* Slider Container */}
       <div className="relative">
         {/* Cards Grid */}
@@ -235,7 +235,7 @@ export function EmployeesGallery() {
               <ChevronLeft className="w-8 h-8 text-gray-800 hover:text-green-700" />
             </button>
           )}
-
+ 
           {/* Employee Cards with Fixed Height */}
           {getVisibleEmployees().map((employee) => (
             <Card
@@ -254,7 +254,7 @@ export function EmployeesGallery() {
                   {employee.department}
                 </Badge>
               </div>
-              
+             
               {/* Content Section - Fixed height with flex layout */}
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-gray-900 mb-1 font-semibold text-lg">
@@ -263,7 +263,7 @@ export function EmployeesGallery() {
                 <p className="text-blue-600 mb-4 font-medium">
                   {employee.designation}
                 </p>
-                
+               
                 {/* Description with Read More */}
                 <div className="mb-4 flex-grow">
                   <p className="text-sm text-gray-600 leading-relaxed">
@@ -279,7 +279,7 @@ export function EmployeesGallery() {
                     </button>
                   )}
                 </div>
-                
+               
                 {/* Contact Info */}
                 <div className="space-y-2 mt-auto">
                   <div className="flex items-center gap-2 text-sm text-gray-600">
@@ -294,7 +294,7 @@ export function EmployeesGallery() {
               </div>
             </Card>
           ))}
-
+ 
           {/* Right Arrow */}
           {totalSlides > 1 && (
             <button
@@ -307,7 +307,7 @@ export function EmployeesGallery() {
             </button>
           )}
         </div>
-
+ 
         {/* Slide Indicators */}
         {totalSlides > 1 && (
           <div className="flex justify-center mt-8 space-x-2">
@@ -316,8 +316,8 @@ export function EmployeesGallery() {
                 key={index}
                 onClick={() => setCurrentSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide 
-                    ? 'bg-blue-600' 
+                  index === currentSlide
+                    ? 'bg-blue-600'
                     : 'bg-gray-300 hover:bg-gray-400'
                 }`}
                 aria-label={language === 'mr' ? `स्लाइड ${index + 1} वर जा` : `Go to slide ${index + 1}`}
@@ -326,7 +326,7 @@ export function EmployeesGallery() {
           </div>
         )}
       </div>
-
+ 
       {/* Employee Detail Modal */}
       {isModalOpen && selectedEmployee && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
@@ -350,7 +350,7 @@ export function EmployeesGallery() {
                 </button>
               </div>
             </div>
-
+ 
             {/* Modal Content */}
             <div className="p-6">
               <div className="flex flex-col md:flex-row gap-6 mb-6">
@@ -368,7 +368,7 @@ export function EmployeesGallery() {
                   <Badge className="bg-blue-100 text-blue-700 mb-4">
                     {selectedEmployee.department}
                   </Badge>
-                  
+                 
                   <div className="space-y-3">
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">
@@ -385,7 +385,7 @@ export function EmployeesGallery() {
                   </div>
                 </div>
               </div>
-
+ 
               <div className="mb-6">
                 <h4 className="font-semibold text-gray-900 mb-2">
                   {language === 'mr' ? 'कार्याचे वर्णन' : 'Role Description'}
@@ -394,7 +394,7 @@ export function EmployeesGallery() {
                   {selectedEmployee.description}
                 </p>
               </div>
-
+ 
               <div className="border-t pt-6">
                 <h4 className="font-semibold text-gray-900 mb-4">
                   {language === 'mr' ? 'संपर्क माहिती' : 'Contact Information'}
@@ -421,7 +421,7 @@ export function EmployeesGallery() {
                 </div>
               </div>
             </div>
-
+ 
             {/* Modal Footer */}
             <div className="sticky bottom-0 bg-white border-t border-gray-200 p-6 rounded-b-2xl">
               <div className="flex justify-end">
