@@ -236,23 +236,24 @@ export function EmployeesGallery() {
             </button>
           )}
  
-          {/* Employee Cards with Fixed Height */}
+          {/* Employee Cards with Fixed Height and Consistent Image Size */}
           {getVisibleEmployees().map((employee) => (
             <Card
               key={employee.id}
               className="overflow-hidden hover:shadow-xl transition-all duration-300 group border-none flex flex-col h-[480px]" // Fixed height
             >
-              {/* Image Section - UPDATED */}
-              <div className="relative bg-gradient-to-br from-blue-500 to-blue-700 h-39 flex items-center justify-center overflow-hidden flex-shrink-0">
-                <div className="w-full h-full flex items-center justify-center">
+              {/* Image Section - UPDATED with light gray background */}
+              <div className="relative bg-gray-100 h-48 flex items-center justify-center overflow-hidden flex-shrink-0">
+                <div className="w-full h-full flex items-center justify-center p-2">
                   <ImageWithFallback
                     src={employee.image}
                     alt={employee.name}
-                    className="max-w-full max-h-full object-contain p-2"
-                    fallbackSrc="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%233b82f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='white'%3E👨‍💼%3C/text%3E%3C/svg%3E"
+                    className="w-full h-full object-contain"
+                    style={{ maxHeight: '180px', maxWidth: '180px' }}
+                    fallbackSrc="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%239ca3af'%3E👨‍💼%3C/text%3E%3C/svg%3E"
                   />
                 </div>
-                <Badge className="absolute top-4 right-4 bg-white text-blue-700 text-xs font-medium">
+                <Badge className="absolute top-4 right-4 bg-white text-blue-700 text-xs font-medium border border-gray-200">
                   {employee.department}
                 </Badge>
               </div>
@@ -329,7 +330,7 @@ export function EmployeesGallery() {
         )}
       </div>
  
-      {/* Employee Detail Modal - UPDATED IMAGE STYLING */}
+      {/* Employee Detail Modal - UPDATED with light gray background */}
       {isModalOpen && selectedEmployee && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
@@ -357,13 +358,13 @@ export function EmployeesGallery() {
             <div className="p-6">
               <div className="flex flex-col md:flex-row gap-6 mb-6">
                 <div className="flex-shrink-0">
-                  {/* Updated modal image container */}
-                  <div className="w-32 h-32 rounded-lg overflow-hidden bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
+                  {/* Updated modal image container with light gray background */}
+                  <div className="w-32 h-32 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
                     <ImageWithFallback
                       src={selectedEmployee.image}
                       alt={selectedEmployee.name}
-                      className="max-w-full max-h-full object-contain p-1"
-                      fallbackSrc="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%233b82f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='white'%3E👨‍💼%3C/text%3E%3C/svg%3E"
+                      className="w-full h-full object-contain p-1"
+                      fallbackSrc="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%239ca3af'%3E👨‍💼%3C/text%3E%3C/svg%3E"
                     />
                   </div>
                 </div>
