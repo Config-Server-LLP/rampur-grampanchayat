@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
@@ -13,6 +13,21 @@ import { Footer } from './components/Footer';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('home');
+
+  // ✅ GOOGLE ANALYTICS - Add this block
+  useEffect(() => {
+    // Load Google Analytics script
+    const script = document.createElement('script');
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-4DRQGDTT1T';
+    script.async = true;
+    document.head.appendChild(script);
+
+    // Initialize gtag
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4DRQGDTT1T');
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
