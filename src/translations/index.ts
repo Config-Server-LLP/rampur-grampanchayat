@@ -1,9 +1,9 @@
 export const translations = {
   en: {
-     // Header
+    // Header
     header: {
-      title: 'Panchayat Samiti Rajura',
-      subtitle: 'Serving the Community of Rajura',
+      title: 'Rampur Grampanchayat',
+      subtitle: 'Serving the Village Community of Rampur',
       nav: {
         home: 'Home',
         about: 'About',
@@ -14,20 +14,19 @@ export const translations = {
         contact: 'Contact Us',
       },
     },
-    
+
     // Hero
     hero: {
-      badge: 'Government of India',
-      title: 'Welcome to Panchayat Samiti Rajura',
-      description:
-        'Dedicated to rural development, social welfare, and inclusive growth of Rajura through transparent governance and citizen-centric initiatives.',
+      badge: 'Government of Maharashtra',
+      title: 'Welcome to Rampur Grampanchayat',
+      description: 'Dedicated to rural development, social welfare, and inclusive growth of Rampur village through transparent governance and citizen-centric initiatives.',
     },
-    
+
     // Quick Links
     quickLinks: {
       schemes: {
         title: 'Government Schemes',
-        description: 'Explore various schemes for community welfare',
+        description: 'Explore various schemes for village welfare',
       },
       employees: {
         title: 'Our Team',
@@ -35,63 +34,55 @@ export const translations = {
       },
       talents: {
         title: 'Local Talents',
-        description: 'Celebrating achievements from our community',
+        description: 'Celebrating achievements from our village',
       },
       contact: {
         title: 'Contact Us',
-        description: 'Get in touch with our office',
+        description: 'Get in touch with our grampanchayat office',
       },
     },
-    
-    // ⭐ UPDATED ABOUT SECTION (ENGLISH)
+
+    // ⭐ UPDATED ABOUT SECTION FOR RAMPUR GRAMPANCHAYAT (ENGLISH)
     about: {
       badge: 'About Us',
-      title: 'About Panchayat Samiti Rajura',
-      para1:
-        'Panchayat Samiti Rajura is a key administrative body under the Panchayati Raj system in Chandrapur district. We are committed to strengthening rural governance, ensuring effective delivery of government schemes, and supporting the holistic development of all villages within the Rajura block.',
-      para2:
-        'Our mission is to empower local communities by improving essential services, promoting agricultural advancement, enhancing infrastructure, and bridging the gap between government policies and grassroots needs through transparency and accountability.',
-      para3:
-        'With a focus on sustainable and inclusive development, Panchayat Samiti Rajura aims to create better opportunities, strengthen public welfare systems, and build a progressive rural environment where every citizen can participate in the developmental journey.',
+      title: 'About Rampur Grampanchayat',
+      para1: 'Rampur Grampanchayat, established on May 5, 2008, serves the vibrant village of Rampur in Rajura block of Chandrapur district. With a population of 3911 people across 1272 families, our grampanchayat is committed to holistic rural development and effective local governance.',
+      para2: 'Located strategically with geographical coordinates 19.783566°N, 79.348022°E, Rampur spans 3.31 sq. km and enjoys excellent connectivity via Gadchandur Road, Govari Road, and Sasti Road. The village is bounded by Bhavani Nala to the east and features rich cultural heritage with multiple temples and community centers.',
+      para3: 'Under the leadership of Sarpanch Smt. Nikita Ramesh Zhade and Deputy Sarpanch Shri Rahul Kisan Bankar, we focus on sustainable development through education, water management, agricultural advancement, and community empowerment with 27 active Self-Help Groups driving local initiatives.',
       features: {
-        governance: {
-          title: 'Transparent Governance',
-          description:
-            'Ensuring accountable, citizen-friendly, and efficient administration for rural development.',
+        demographics: {
+          title: 'Village Demographics',
+          description: '3911 population with 1272 families, serving SC (760), ST (247), and other communities (2904) with inclusive development.',
         },
-        development: {
-          title: 'Block-Level Development',
-          description:
-            'Implementing schemes related to roads, water supply, sanitation, agriculture, and digital empowerment.',
+        education: {
+          title: 'Education Facilities',
+          description: '6 Anganwadis, Zilla Parishad School, Priyadarshani College, and Brilliant Convent providing comprehensive education.',
         },
-        empowerment: {
-          title: 'Community Participation',
-          description:
-            'Encouraging Gram Sabhas, self-help groups, youth engagement, and public involvement in local planning.',
+        water: {
+          title: 'Water Resources',
+          description: '11 public handpumps, 4 RO plants, 628 tap connections, and sustainable water management through Bhavani Nala.',
         },
-        welfare: {
-          title: 'Public Welfare',
-          description:
-            'Promoting education, healthcare, social welfare schemes, and inclusive growth for all citizens.',
+        agriculture: {
+          title: 'Agriculture',
+          description: '42.25 hectares cultivable land with 22.28 hectares irrigated area supported by borewells and natural water sources.',
         },
       },
     },
-    
+
     // Employees
     employees: {
       badge: 'Our Team',
-      title: 'Employees Gallery',
-      description: 'Meet our dedicated team of professionals working tirelessly to serve the community and implement effective governance.',
+      title: 'Grampanchayat Team',
+      description: 'Meet our dedicated team working tirelessly to serve the village community and implement effective local governance.',
       designations: {
-        bdo: 'Block Development Officer',
+        sarpanch: 'Sarpanch',
+        upSarpanch: 'Deputy Sarpanch',
+        grampanchayatOfficer: 'Grampanchayat Officer',
         secretary: 'Panchayat Secretary',
-        agriculture: 'Agriculture Officer',
+        agriculture: 'Agriculture Supervisor',
         welfare: 'Social Welfare Officer',
-        engineering: 'Engineering Supervisor',
         education: 'Education Coordinator',
-        finance: 'Finance Officer',
         health: 'Health Supervisor',
-        planning: 'Planning Officer',
       },
       departments: {
         administration: 'Administration',
@@ -100,22 +91,21 @@ export const translations = {
         welfare: 'Welfare',
         infrastructure: 'Infrastructure',
         education: 'Education',
-        finance: 'Finance',
+        water: 'Water Supply',
         health: 'Health',
-        planning: 'Planning',
       },
     },
-    
+
     // Schemes
     schemes: {
       badge: 'Government Initiatives',
       title: 'Government Schemes',
-      description: 'Explore various welfare schemes and development programs designed to empower and uplift our communities.',
+      description: 'Explore various welfare schemes and development programs designed to empower and uplift our village community.',
       viewDetails: 'View Details',
       visitWebsite: 'Visit Website →',
       keyBenefits: 'Key Benefits',
       eligibility: 'Eligibility Criteria',
-      moreInfo: 'For more information and application process, please visit your nearest Panchayat office or contact our helpline.',
+      moreInfo: 'For more information and application process, please visit our Grampanchayat office or contact our helpline.',
       categories: {
         housing: 'Housing',
         agriculture: 'Agriculture',
@@ -123,14 +113,15 @@ export const translations = {
         healthcare: 'Healthcare',
         employment: 'Employment',
         womenEmpowerment: 'Women Empowerment',
+        water: 'Water Supply',
       },
     },
-    
+
     // Talents
     talents: {
       badge: 'Celebrating Excellence',
-      title: 'Recent Talents',
-      description: 'Honoring the exceptional achievements of talented individuals from our community who have made us proud through their remarkable accomplishments.',
+      title: 'Village Talents',
+      description: 'Honoring the exceptional achievements of talented individuals from our village who have made us proud through their remarkable accomplishments.',
       nominate: {
         title: 'Awarded Talent',
         description: 'Know someone exceptional? Help us recognize and celebrate their achievements.',
@@ -139,28 +130,28 @@ export const translations = {
         education: 'Education',
         sports: 'Sports',
         agriculture: 'Agriculture',
-        debate: 'Debate',
         arts: 'Arts',
         business: 'Business',
-        literature: 'Literature',
         socialService: 'Social Service',
+        teaching: 'Teaching',
+        healthcare: 'Healthcare',
       },
     },
-    
+
     // Map
     map: {
       badge: 'Location',
       title: 'Find Us',
-      description: 'Visit our office for any assistance or inquiries. We\'re here to serve you.',
+      description: 'Visit our Grampanchayat office for any assistance or inquiries. We\'re here to serve you.',
       officeAddress: 'Office Address',
       officeHours: 'Office Hours',
       contactNumbers: 'Contact Numbers',
       address: {
-        line1: 'Panchayat Samiti Office, Rajura',
-        line2: 'Block Development Office',
-        line3: 'Chandrapur District, Maharashtra',
+        line1: 'Rampur Grampanchayat Office',
+        line2: 'Rajura Block, Chandrapur District',
+        line3: 'Maharashtra, India',
         line4: 'Pincode: 442905',
-        line5: 'India',
+        line5: 'Email: sangramrampur@gmail.com',
       },
       hours: {
         weekday: 'Monday - Friday:',
@@ -174,10 +165,11 @@ export const translations = {
       contact: {
         office: 'Office:',
         helpline: 'Helpline:',
-        fax: 'Fax:',
+        sarpanch: 'Sarpanch:',
+        upSarpanch: 'Deputy Sarpanch:',
       },
     },
-    
+
     // Contact
     contact: {
       badge: 'Get In Touch',
@@ -205,16 +197,16 @@ export const translations = {
       },
       officeHoursTitle: 'Office Hours',
       emergencyTitle: 'Emergency Contact',
-      emergencyDesc: 'For urgent matters and emergencies, please contact our 24/7 helpline:',
+      emergencyDesc: 'For urgent matters and emergencies, please contact our helpline:',
       emergencyLabel: 'Emergency Helpline',
       grievanceTitle: 'Public Grievance',
-      grievanceDesc: 'Register your complaints and track status through our online portal:',
-      grievanceButton: 'Visit Grievance Portal →',
+      grievanceDesc: 'Register your complaints and track status through our Grampanchayat office:',
+      grievanceButton: 'Visit Grampanchayat Office →',
     },
-    
-     // Footer - UPDATED FOR RAJURA
+
+    // Footer - UPDATED FOR RAMPUR GRAMPANCHAYAT
     footer: {
-      description: 'Rajura Panchayat Samiti is a local self-government body serving Rajura taluka in Chandrapur district. Committed to rural development, social welfare and transparent governance.',
+      description: 'Rampur Grampanchayat is a local self-government body serving Rampur village in Rajura block, Chandrapur district. Committed to rural development, social welfare and transparent governance.',
       quickLinks: 'Quick Links',
       importantLinks: 'Important Links',
       contactInfo: 'Contact Info',
@@ -231,19 +223,19 @@ export const translations = {
         terms: 'Terms of Service',
         sitemap: 'Sitemap',
       },
-      copyright: 'Copyright © 2025 Panchayat Samiti Rajura | All Rights Reserved',
-      disclaimer: 'This is an official government website. Content owned and maintained by Panchayat Samiti Rajura.',
+      copyright: 'Copyright © 2025 Rampur Grampanchayat | All Rights Reserved',
+      disclaimer: 'This is an official Grampanchayat website. Content owned and maintained by Rampur Grampanchayat.',
     },
   },
-  
+
   mr: {
     // Header
     header: {
-      title: 'पंचायत समिती राजूरा',
-      subtitle: 'राजूरा समुदायाची सेवा',
+      title: 'रामपूर ग्रामपंचायत',
+      subtitle: 'रामपूर गाव समुदायाची सेवा',
       nav: {
         home: 'मुख्यपृष्ठ',
-        about: 'पंचायत समितीबद्दल',
+        about: 'आमच्याबद्दल',
         employees: 'कर्मचारी',
         schemes: 'योजना',
         talents: 'प्रतिभा',
@@ -254,17 +246,16 @@ export const translations = {
 
     // Hero
     hero: {
-      badge: 'भारत सरकार',
-      title: 'पंचायत समिती राजूरा मध्ये आपले स्वागत आहे',
-      description:
-        'पारदर्शक शासन, नागरिक-केंद्रित उपक्रम आणि ग्रामीण विकासाच्या दिशेने राजूरा येथे शाश्वत व सर्वसमावेशक प्रगतीसाठी वचनबद्ध.',
+      badge: 'महाराष्ट्र शासन',
+      title: 'रामपूर ग्रामपंचायत मध्ये आपले स्वागत आहे',
+      description: 'पारदर्शक शासन, नागरिक-केंद्रित उपक्रम आणि ग्रामीण विकासाच्या दिशेने रामपूर गावात शाश्वत व सर्वसमावेशक प्रगतीसाठी वचनबद्ध.',
     },
 
     // Quick Links
     quickLinks: {
       schemes: {
         title: 'सरकारी योजना',
-        description: 'समुदाय कल्याणासाठी विविध योजनांचा शोध घ्या',
+        description: 'गाव कल्याणासाठी विविध योजनांचा शोध घ्या',
       },
       employees: {
         title: 'आमचा संघ',
@@ -272,64 +263,55 @@ export const translations = {
       },
       talents: {
         title: 'स्थानिक प्रतिभा',
-        description: 'आमच्या समुदायातील उपलब्धी साजरी करत आहोत',
+        description: 'आमच्या गावातील उपलब्धी साजरी करत आहोत',
       },
       contact: {
         title: 'संपर्क करा',
-        description: 'आमच्या कार्यालयाशी संपर्क साधा',
+        description: 'आमच्या ग्रामपंचायत कार्यालयाशी संपर्क साधा',
       },
     },
 
-    // ⭐ UPDATED ABOUT SECTION (MARATHI)
+    // ⭐ UPDATED ABOUT SECTION FOR RAMPUR GRAMPANCHAYAT (MARATHI)
     about: {
       badge: 'आमच्याबद्दल',
-      title: 'पंचायत समिती राजूरा',
-      para1:
-        'पंचायत समिती राजूरा ही चंद्रपूर जिल्ह्यातील पंचायती राज व्यवस्थेतील एक महत्त्वाची संस्था आहे. राजूरा खंडातील सर्व ग्रामपंचायतींमध्ये प्रभावी शासन, विकास योजना आणि शासकीय सेवांची अंमलबजावणी सुनिश्चित करण्यासाठी आम्ही कटिबद्ध आहोत.',
-      para2:
-        'आमचे उद्दिष्ट ग्रामीण पायाभूत सुविधा मजबूत करणे, कृषी प्रगतीस चालना देणे, शिक्षण व आरोग्य सुविधांचा विकास करणे आणि शासकीय धोरणे व लोकांच्या गरजा यांच्यातील अंतर पारदर्शकतेने व उत्तरदायित्वाने भरून काढणे आहे.',
-      para3:
-        'शाश्वत व सर्वसमावेशक विकासाच्या दिशेने, पंचायत समिती राजूरा नागरिकांना संधी, सुविधा आणि उत्तम जीवनस्तर प्रदान करण्यासाठी सतत प्रयत्नशील आहे.',
+      title: 'रामपूर ग्रामपंचायत',
+      para1: 'रामपूर ग्रामपंचायत, ५ मे २००८ रोजी स्थापन झालेली, चंद्रपूर जिल्ह्यातील राजुरा खंडातील रामपूर गावाची सेवा करते. १२७२ कुटुंबे आणि ३९११ लोकसंख्या असलेल्या आमच्या ग्रामपंचायतीने सर्वसमावेशक ग्रामीण विकास आणि प्रभावी स्थानिक शासनासाठी वचनबद्धता दर्शवली आहे.',
+      para2: '१९.७८३५६६°उ, ७९.३४८०२२°पू या भौगोलिक स्थानावर स्थित, रामपूर ३.३१ चौ.कि.मी. क्षेत्रात पसरलेले असून गडचांदूर रोड, गोवरी रोड आणि सास्ती रोड द्वारे उत्कृष्ट संपर्क सुविधा आहेत. गाव पूर्वेस भवानी नाला याने सीमा असून अनेक मंदिरे आणि समुदाय केंद्रे यांचे समृद्ध सांस्कृतिक वारसा लाभलेले आहे.',
+      para3: 'सरपंच सौ. निकिता रमेश झाडे आणि उपसरपंच श्री. राहुल किसन बानकर यांच्या नेतृत्वाखाली, आम्ही शिक्षण, जलव्यवस्थापन, कृषी प्रगती आणि २७ सक्रिय स्वयंसाहाय्य गटांद्वारे समुदाय सक्षमीकरणाद्वारे शाश्वत विकासावर लक्ष केंद्रित करत आहोत.',
       features: {
-        governance: {
-          title: 'पारदर्शक शासन',
-          description:
-            'उत्तरदायित्वपूर्ण, नागरिक-केंद्रित आणि कार्यक्षम प्रशासनाची अंमलबजावणी.',
+        demographics: {
+          title: 'गावाची लोकसंख्या',
+          description: '३९११ लोकसंख्या आणि १२७२ कुटुंबे, अनुसूचित जाती (७६०), अनुसूचित जमाती (२४७) आणि इतर समुदाय (२९०४) यांना सर्वसमावेशक विकासाद्वारे सेवा.',
         },
-        development: {
-          title: 'खंडस्तरीय विकास',
-          description:
-            'रस्ते, पाणीपुरवठा, स्वच्छता, कृषी आणि डिजिटल सक्षमीकरणाशी संबंधित प्रकल्पांची प्रभावी अंमलबजावणी.',
+        education: {
+          title: 'शैक्षणिक सुविधा',
+          description: '६ आंगणवाड्या, जिल्हा परिषद शाळा, प्रियदर्शनी महाविद्यालय आणि ब्रीलियंट कान्व्हेंट द्वारे सर्वांगीण शिक्षण.',
         },
-        empowerment: {
-          title: 'समुदाय सहभाग',
-          description:
-            'ग्रामसभा, स्वयं-साहाय्य गट, युवकांचा सहभाग आणि स्थानिक नियोजनात सक्रिय भूमिका प्रोत्साहित करणे.',
+        water: {
+          title: 'जलस्रोत',
+          description: '११ सार्वजनिक हातपंप, ४ आरओ प्लांट, ६२८ वैयक्तिक नळ जोडण्या आणि भवानी नालाद्वारे शाश्वत जलव्यवस्थापन.',
         },
-        welfare: {
-          title: 'समाज कल्याण',
-          description:
-            'शिक्षण, आरोग्य, सामाजिक संरक्षण योजना आणि सर्व नागरिकांच्या विकासासाठी उपयुक्त कार्यक्रम.',
+        agriculture: {
+          title: 'कृषी',
+          description: '४२.२५ हेक्टर कृषीयोग्य जमीन आणि २२.२८ हेक्टर सिंचित क्षेत्र बोरवेल आणि नैसर्गिक जलस्रोतांद्वारे समर्थित.',
         },
       },
     },
-    
-    
+
     // Employees
     employees: {
       badge: 'आमचा संघ',
-      title: 'कर्मचारी गॅलरी',
-      description: 'समाजाची सेवा करण्यासाठी आणि प्रभावी शासन लागू करण्यासाठी अथक परिश्रम करणाऱ्या आमच्या समर्पित व्यावसायिकांच्या टीमला भेटा.',
+      title: 'ग्रामपंचायत संघ',
+      description: 'गाव समुदायाची सेवा करण्यासाठी आणि प्रभावी स्थानिक शासन लागू करण्यासाठी अथक परिश्रम करणाऱ्या आमच्या समर्पित संघाला भेटा.',
       designations: {
-        bdo: 'विकास खंड अधिकारी',
+        sarpanch: 'सरपंच',
+        upSarpanch: 'उपसरपंच',
+        grampanchayatOfficer: 'ग्रामपंचायत अधिकारी',
         secretary: 'पंचायत सचिव',
-        agriculture: 'कृषी अधिकारी',
+        agriculture: 'कृषी पर्यवेक्षक',
         welfare: 'समाज कल्याण अधिकारी',
-        engineering: 'अभियांत्रिकी पर्यवेक्षक',
         education: 'शिक्षण समन्वयक',
-        finance: 'वित्त अधिकारी',
         health: 'आरोग्य पर्यवेक्षक',
-        planning: 'नियोजन अधिकारी',
       },
       departments: {
         administration: 'प्रशासन',
@@ -338,22 +320,21 @@ export const translations = {
         welfare: 'कल्याण',
         infrastructure: 'पायाभूत सुविधा',
         education: 'शिक्षण',
-        finance: 'वित्त',
+        water: 'जलपुरवठा',
         health: 'आरोग्य',
-        planning: 'नियोजन',
       },
     },
-    
+
     // Schemes
     schemes: {
       badge: 'सरकारी उपक्रम',
       title: 'सरकारी योजना',
-      description: 'आमच्या समुदायांना सशक्त आणि उन्नत करण्यासाठी डिझाइन केलेल्या विविध कल्याणकारी योजना आणि विकास कार्यक्रम शोधा.',
+      description: 'आमच्या गाव समुदायांना सशक्त आणि उन्नत करण्यासाठी डिझाइन केलेल्या विविध कल्याणकारी योजना आणि विकास कार्यक्रम शोधा.',
       viewDetails: 'तपशील पहा',
       visitWebsite: 'वेबसाइटला भेट द्या →',
       keyBenefits: 'मुख्य फायदे',
       eligibility: 'पात्रता निकष',
-      moreInfo: 'अधिक माहिती आणि अर्ज प्रक्रियेसाठी, कृपया आपल्या जवळच्या पंचायत कार्यालयात भेट द्या किंवा आमच्या हेल्पलाइनवर संपर्क साधा.',
+      moreInfo: 'अधिक माहिती आणि अर्ज प्रक्रियेसाठी, कृपया आपल्या ग्रामपंचायत कार्यालयात भेट द्या किंवा आमच्या हेल्पलाइनवर संपर्क साधा.',
       categories: {
         housing: 'गृहनिर्माण',
         agriculture: 'कृषी',
@@ -361,14 +342,15 @@ export const translations = {
         healthcare: 'आरोग्य सेवा',
         employment: 'रोजगार',
         womenEmpowerment: 'महिला सशक्तीकरण',
+        water: 'जलपुरवठा',
       },
     },
-    
+
     // Talents
     talents: {
       badge: 'उत्कृष्टता साजरी करत आहोत',
-      title: 'अलीकडील प्रतिभा',
-      description: 'आमच्या समुदायातील प्रतिभावान व्यक्तींच्या अपवादात्मक कामगिरीचा सन्मान करत आहोत ज्यांनी त्यांच्या उल्लेखनीय कामगिरीद्वारे आम्हाला अभिमान वाटला आहे.',
+      title: 'गावातील प्रतिभा',
+      description: 'आमच्या गावातील प्रतिभावान व्यक्तींच्या अपवादात्मक कामगिरीचा सन्मान करत आहोत ज्यांनी त्यांच्या उल्लेखनीय कामगिरीद्वारे आम्हाला अभिमान वाटला आहे.',
       nominate: {
         title: 'पुरस्कृत प्रतिभा',
         description: 'एखाद्या अपवादात्मक व्यक्तीला ओळखता? त्यांच्या कामगिरीची ओळख आणि उत्सव साजरा करण्यास आम्हाला मदत करा.',
@@ -377,28 +359,28 @@ export const translations = {
         education: 'शिक्षण',
         sports: 'क्रीडा',
         agriculture: 'कृषी',
-        debate: 'वादविवाद',
         arts: 'कला',
         business: 'व्यवसाय',
-        literature: 'साहित्य',
         socialService: 'समाज सेवा',
+        teaching: 'शिक्षणक्षेत्र',
+        healthcare: 'आरोग्यसेवा',
       },
     },
-    
+
     // Map
     map: {
       badge: 'स्थान',
       title: 'आम्हाला शोधा',
-      description: 'कोणत्याही सहाय्यासाठी किंवा चौकशीसाठी आमच्या कार्यालयाला भेट द्या. आम्ही तुमची सेवा करण्यासाठी येथे आहोत.',
+      description: 'कोणत्याही सहाय्यासाठी किंवा चौकशीसाठी आमच्या ग्रामपंचायत कार्यालयाला भेट द्या. आम्ही तुमची सेवा करण्यासाठी येथे आहोत.',
       officeAddress: 'कार्यालय पत्ता',
       officeHours: 'कार्यालयीन वेळ',
       contactNumbers: 'संपर्क क्रमांक',
       address: {
-        line1: 'पंचायत समिती कार्यालय, राजूरा',
-        line2: 'विकास खंड कार्यालय',
-        line3: 'चंद्रपूर जिल्हा, महाराष्ट्र',
+        line1: 'रामपूर ग्रामपंचायत कार्यालय',
+        line2: 'राजुरा खंड, चंद्रपूर जिल्हा',
+        line3: 'महाराष्ट्र, भारत',
         line4: 'पिन कोड: ४४२९०५',
-        line5: 'भारत',
+        line5: 'ईमेल: sangramrampur@gmail.com',
       },
       hours: {
         weekday: 'सोमवार - शुक्रवार:',
@@ -412,10 +394,11 @@ export const translations = {
       contact: {
         office: 'कार्यालय:',
         helpline: 'हेल्पलाइन:',
-        fax: 'फॅक्स:',
+        sarpanch: 'सरपंच:',
+        upSarpanch: 'उपसरपंच:',
       },
     },
-    
+
     // Contact
     contact: {
       badge: 'संपर्कात रहा',
@@ -443,16 +426,16 @@ export const translations = {
       },
       officeHoursTitle: 'कार्यालयीन वेळ',
       emergencyTitle: 'आपत्कालीन संपर्क',
-      emergencyDesc: 'तातडीच्या बाबी आणि आपत्कालीन परिस्थितीसाठी, कृपया आमच्या 24/7 हेल्पलाइनवर संपर्क साधा:',
+      emergencyDesc: 'तातडीच्या बाबी आणि आपत्कालीन परिस्थितीसाठी, कृपया आमच्या हेल्पलाइनवर संपर्क साधा:',
       emergencyLabel: 'आपत्कालीन हेल्पलाइन',
       grievanceTitle: 'सार्वजनिक तक्रार',
-      grievanceDesc: 'आमच्या ऑनलाइन पोर्टलद्वारे आपल्या तक्रारी नोंदवा आणि स्थिती ट्रॅक करा:',
-      grievanceButton: 'तक्रार पोर्टलला भेट द्या →',
+      grievanceDesc: 'आमच्या ग्रामपंचायत कार्यालयातून आपल्या तक्रारी नोंदवा आणि स्थिती ट्रॅक करा:',
+      grievanceButton: 'ग्रामपंचायत कार्यालयाला भेट द्या →',
     },
-    
-    // Footer - UPDATED FOR RAJURA
+
+    // Footer - UPDATED FOR RAMPUR GRAMPANCHAYAT
     footer: {
-      description: 'राजूरा पंचायत समिती ही चंद्रपूर जिल्ह्यातील राजूरा तालुक्यासाठी कार्यरत असलेली स्थानिक स्वराज्य संस्था आहे. ग्रामीण विकास, सामाजिक कल्याण आणि पारदर्शक शासनासाठी वचनबद्ध.',
+      description: 'रामपूर ग्रामपंचायत ही चंद्रपूर जिल्ह्यातील राजुरा खंडातील रामपूर गावासाठी कार्यरत असलेली स्थानिक स्वराज्य संस्था आहे. ग्रामीण विकास, सामाजिक कल्याण आणि पारदर्शक शासनासाठी वचनबद्ध.',
       quickLinks: 'द्रुत दुवे',
       importantLinks: 'महत्त्वाचे दुवे',
       contactInfo: 'संपर्क माहिती',
@@ -469,9 +452,8 @@ export const translations = {
         terms: 'सेवा अटी',
         sitemap: 'साइट नकाशा',
       },
-      copyright: 'प्रताधिकार © २०२५ पंचायत समिती राजूरा | सर्व हक्क राखीव',
-      disclaimer: 'ही अधिकृत सरकारी वेबसाइट आहे. सामग्री पंचायत समिती राजूरा द्वारे मालकीची आणि राखलेली आहे.',
+      copyright: 'प्रताधिकार © २०२५ रामपूर ग्रामपंचायत | सर्व हक्क राखीव',
+      disclaimer: 'ही अधिकृत ग्रामपंचायत वेबसाइट आहे. सामग्री रामपूर ग्रामपंचायत द्वारे मालकीची आणि राखलेली आहे.',
     },
   },
-
 };

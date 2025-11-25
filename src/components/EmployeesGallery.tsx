@@ -37,7 +37,7 @@ export function EmployeesGallery() {
       department: t.employees.departments.documentation,
       email: 'secretary.priyasharma@panchayatsamiti.gov.in',
       phone: '+91 98765 43211',
-      image: 'images/employee2.jpg',
+      image: 'images/SARPANCH.jpg',
       description: language === 'mr'
         ? 'सर्व अधिकृत दस्तऐवजीकरण, रेकॉर्ड देखभाल आणि प्रशासकीय पत्रव्यवहार व्यवस्थापित करते. बैठक आणि निर्णयांचे योग्य दस्तऐवजीकरण सुनिश्चित करते.'
         : 'Manages all official documentation, records maintenance, and administrative correspondence. Ensures proper documentation of meetings and decisions.',
@@ -242,14 +242,16 @@ export function EmployeesGallery() {
               key={employee.id}
               className="overflow-hidden hover:shadow-xl transition-all duration-300 group border-none flex flex-col h-[480px]" // Fixed height
             >
-              {/* Image Section */}
-              <div className="relative bg-gradient-to-br from-blue-500 to-blue-700 h-48 flex items-center justify-center overflow-hidden flex-shrink-0">
-                <ImageWithFallback
-                  src={employee.image}
-                  alt={employee.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                  fallbackSrc="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%233b82f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='white'%3E👨‍💼%3C/text%3E%3C/svg%3E"
-                />
+              {/* Image Section - UPDATED */}
+              <div className="relative bg-gradient-to-br from-blue-500 to-blue-700 h-39 flex items-center justify-center overflow-hidden flex-shrink-0">
+                <div className="w-full h-full flex items-center justify-center">
+                  <ImageWithFallback
+                    src={employee.image}
+                    alt={employee.name}
+                    className="max-w-full max-h-full object-contain p-2"
+                    fallbackSrc="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%233b82f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='white'%3E👨‍💼%3C/text%3E%3C/svg%3E"
+                  />
+                </div>
                 <Badge className="absolute top-4 right-4 bg-white text-blue-700 text-xs font-medium">
                   {employee.department}
                 </Badge>
@@ -327,7 +329,7 @@ export function EmployeesGallery() {
         )}
       </div>
  
-      {/* Employee Detail Modal */}
+      {/* Employee Detail Modal - UPDATED IMAGE STYLING */}
       {isModalOpen && selectedEmployee && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
@@ -355,11 +357,12 @@ export function EmployeesGallery() {
             <div className="p-6">
               <div className="flex flex-col md:flex-row gap-6 mb-6">
                 <div className="flex-shrink-0">
-                  <div className="w-32 h-32 rounded-lg overflow-hidden bg-gradient-to-br from-blue-500 to-blue-700">
+                  {/* Updated modal image container */}
+                  <div className="w-32 h-32 rounded-lg overflow-hidden bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
                     <ImageWithFallback
                       src={selectedEmployee.image}
                       alt={selectedEmployee.name}
-                      className="w-full h-full object-cover"
+                      className="max-w-full max-h-full object-contain p-1"
                       fallbackSrc="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%233b82f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='white'%3E👨‍💼%3C/text%3E%3C/svg%3E"
                     />
                   </div>
