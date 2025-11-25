@@ -121,7 +121,7 @@ export function About() {
         <div className="relative">
           <div className="rounded-xl overflow-hidden shadow-2xl">
             <ImageWithFallback
-              src="\images\about.jpg"
+              src="images\about.jpg"
               alt={currentLanguage === "mr" ? "रामपूर ग्रामपंचायत" : "Rampur Grampanchayat"}
               className="w-full h-[400px] object-cover"
             />
