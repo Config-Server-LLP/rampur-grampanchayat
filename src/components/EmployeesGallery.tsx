@@ -12,60 +12,62 @@ export function EmployeesGallery() {
   const [isModalOpen, setIsModalOpen] = useState(false);
  
   const employees = [
+   
     {
-      id: 1,
-      name: language === 'mr' ? 'राजेश कुमार सिंह' : 'Rajesh Kumar Singh',
-      designation: t.employees.designations.bdo,
-      department: t.employees.departments.administration,
-      email: 'bdo.rajeshkumar@panchayatsamiti.gov.in',
-      phone: '+91 98765 43210',
-      image: 'images/employee1.jpg',
-      description: language === 'mr'
-        ? 'ब्लॉकच्या एकूण प्रशासन आणि विकासासाठी जबाबदार. सर्व सरकारी योजनांच्या अंमलबजावणीवर देखरेख करतो आणि विविध विभागांमधील समन्वय सुनिश्चित करतो.'
-        : 'Responsible for overall administration and development of the block. Oversees implementation of all government schemes and ensures coordination between different departments.',
-      experience: language === 'mr'
-        ? 'ग्रामीण विकासात 15 वर्षे अनुभव'
-        : '15 years in rural development',
-      qualifications: language === 'mr'
-        ? 'पब्लिक अॅडमिनिस्ट्रेशनमध्ये एम.ए., ग्रामीण विकासात डिप्लोमा'
-        : 'M.A. in Public Administration, Diploma in Rural Development'
-    },
+  id: 1,
+  name: language === 'mr' ? 'श्री. सचिन तुळशिराम विरुटकर' : 'Shri Sachin Tulshiram Virutkar',
+  designation: language === 'mr' ? 'ग्रामपंचायत अधिकारी' : 'Gram Panchayat Officer',
+  department: t.employees.departments.administration,
+  email: 'sangramrampur@gmail.com',
+  phone: '+91 9765246810',
+  image: 'images/employee1.jpg',
+  description: language === 'mr'
+    ? 'ग्रामपंचायत कार्यालयाच्या दैनंदिन कार्यप्रणालीसाठी जबाबदार. सर्व प्रशासकीय कार्ये, नोंदी व्यवस्थापित करतो आणि ग्रामपंचायत कार्यक्रमांच्या अंमलबजावणीवर देखरेख ठेवतो. सरपंच आणि उपसरपंच यांना प्रशासकीय बाबतीत सहाय्य करतो.'
+    : 'Responsible for the daily operations of the Gram Panchayat office. Manages all administrative tasks, maintains records, and oversees implementation of Gram Panchayat programs. Assists the Sarpanch and Deputy Sarpanch in administrative matters.',
+  experience: language === 'mr'
+    ? 'प्रशासकीय सेवांमध्ये १० वर्षे अनुभव'
+    : '10 years in administrative services',
+  qualifications: language === 'mr'
+    ? 'बी.कॉम, एलएलबी, ग्रामीण प्रशासनात डिप्लोमा'
+    : 'B.Com, LLB, Diploma in Rural Administration'
+},
     {
-      id: 2,
-      name: language === 'mr' ? 'प्रिया शर्मा पटेल' : 'Priya Sharma Patel',
-      designation: t.employees.designations.secretary,
-      department: t.employees.departments.documentation,
-      email: 'secretary.priyasharma@panchayatsamiti.gov.in',
-      phone: '+91 98765 43211',
-      image: 'images/SARPANCH.jpg',
-      description: language === 'mr'
-        ? 'सर्व अधिकृत दस्तऐवजीकरण, रेकॉर्ड देखभाल आणि प्रशासकीय पत्रव्यवहार व्यवस्थापित करते. बैठक आणि निर्णयांचे योग्य दस्तऐवजीकरण सुनिश्चित करते.'
-        : 'Manages all official documentation, records maintenance, and administrative correspondence. Ensures proper documentation of meetings and decisions.',
-      experience: language === 'mr'
-        ? 'प्रशासकीय सेवांमध्ये 12 वर्षे अनुभव'
-        : '12 years in administrative services',
-      qualifications: language === 'mr'
-        ? 'बी.कॉम, एलएलबी, ऑफिस मॅनेजमेंटमध्ये डिप्लोमा'
-        : 'B.Com, LLB, Diploma in Office Management'
-    },
+  id: 2,
+  name: language === 'mr' ? 'सौ. निकिता रमेश झाडे' : 'Smt. Nikita Ramesh Zhade',
+  designation: language === 'mr' ? 'सरपंच' : 'Sarpanch',
+  department: language === 'mr' ? 'ग्रामपंचायत प्रशासन' : 'Gram Panchayat Administration',
+  email: 'sangramrampur@gmail.com',
+  phone: '+91 7218266300',
+  image: 'images/SARPANCH.jpg',
+  description: language === 'mr'
+    ? 'ग्रामपंचायतचे प्रमुख अधिकारी म्हणून कार्यरत. ग्रामपंचायतच्या सर्व कार्यक्रमांचे नियोजन, अंमलबजावणी आणि देखरेख करतात. ग्रामस्थांशी थेट संवाद साधून त्यांच्या समस्यांचे निराकरण करतात.'
+    : 'Serving as the head of the Gram Panchayat. Responsible for planning, implementing, and monitoring all village development programs. Works directly with villagers to address their concerns and ensure community welfare.',
+  experience: language === 'mr'
+    ? 'ग्रामीण विकासात ८ वर्षे अनुभव'
+    : '8 years in rural development',
+  qualifications: language === 'mr'
+    ? 'बी.ए., ग्रामीण विकासात डिप्लोमा'
+    : 'B.A., Diploma in Rural Development'
+},
+
     {
-      id: 3,
-      name: language === 'mr' ? 'अमित कुमार वर्मा' : 'Amit Kumar Verma',
-      designation: t.employees.designations.agriculture,
-      department: t.employees.departments.agriculture,
-      email: 'agriculture.amitverma@panchayatsamiti.gov.in',
-      phone: '+91 98765 43212',
-      image: 'images/employee3.jpg',
-      description: language === 'mr'
-        ? 'शेतकऱ्यांना तांत्रिक मार्गदर्शन प्रदान करतो, कृषी योजना लागू करतो आणि आधुनिक शेती तंत्रज्ञानाला प्रोत्साहन देतो. शेतकऱ्यांसाठी प्रशिक्षण कार्यक्रम आयोजित करतो.'
-        : 'Provides technical guidance to farmers, implements agricultural schemes, and promotes modern farming techniques. Conducts training programs for farmers.',
-      experience: language === 'mr'
-        ? 'कृषी विस्तार सेवेत 10 वर्षे अनुभव'
-        : '10 years in agricultural extension',
-      qualifications: language === 'mr'
-        ? 'बी.एससी. कृषी, एम.एससी. कृषिशास्त्र'
-        : 'B.Sc. Agriculture, M.Sc. Agronomy'
-    },
+  id: 3,
+  name: language === 'mr' ? 'श्री. राहुल किसन बानकर' : 'Shri Rahul Kisan Bankar',
+  designation: language === 'mr' ? 'उपसरपंच' : 'Deputy Sarpanch',
+  department: t.employees.departments.administration,
+  email: 'sangramrampur@gmail.com',
+  phone: '+91 7020572195',
+  image: 'images/employee3.jpg',
+  description: language === 'mr'
+    ? 'सरपंच यांच्या अनुपस्थितीत ग्रामपंचायतचे कार्यभार सांभाळतात. ग्रामविकास कार्यक्रमांमध्ये सक्रिय सहभाग, ग्रामस्थांच्या समस्यांचे निराकरण आणि सार्वजनिक कार्यक्रमांचे आयोजन करतात. ग्रामपंचायत सभेच्या बैठकांमध्ये महत्त्वाची भूमिका बजावतात.'
+    : 'Assumes charge of Gram Panchayat in the absence of Sarpanch. Actively participates in village development programs, resolves villagers\' issues, and organizes public events. Plays a key role in Gram Panchayat committee meetings and decision-making processes.',
+  experience: language === 'mr'
+    ? 'सामाजिक कार्यात ६ वर्षे अनुभव'
+    : '6 years in social work',
+  qualifications: language === 'mr'
+    ? 'बारावी, ग्रामीण विकास प्रशिक्षण'
+    : '12th Grade, Rural Development Training'
+},
     {
       id: 4,
       name: language === 'mr' ? 'सुमित लक्ष्मण देवी' : 'Sumit Laxman Devi',
