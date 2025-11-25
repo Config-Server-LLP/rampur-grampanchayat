@@ -334,7 +334,8 @@ export function EmployeesGallery() {
  
       {/* Employee Detail Modal - UPDATED with light gray background */}
       {isModalOpen && selectedEmployee && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+  <div className="fixed inset-0 bg-black/50 backdrop-blur-md flex items-center justify-center p-4 z-50 transition-all duration-300">
+
           <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             {/* Modal Header */}
             <div className="sticky top-0 bg-white border-b border-gray-200 p-6 rounded-t-2xl">

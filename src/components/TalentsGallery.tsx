@@ -377,7 +377,7 @@ export function TalentsGallery() {
           {totalSlides > 1 && (
             <button
               onClick={prevSlide}
-              style={{ marginTop: "650px" }}
+              style={{ marginTop: "575px" }}
               className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 z-10 bg-white rounded-full p-4 shadow-2xl hover:bg-orange-50 border-2 border-gray-300 hover:border-orange-500 transition-all duration-300"
               aria-label={language === 'mr' ? 'मागील स्लाइड' : 'Previous slide'}
             >
@@ -414,7 +414,9 @@ export function TalentsGallery() {
 
                 <div className="p-6 flex flex-col flex-grow">
                   {/* Full Description */}
-                  <div className="mb-6">
+                  {/* <div className="mb-6"> */}
+                  <div className="mb-6 h-20 overflow-hidden">
+
                     <h4 className="font-semibold text-gray-800 mb-3 text-sm">
                       {language === 'mr' ? 'विभागाचे वर्णन' : 'Department Description'}
                     </h4>
@@ -428,7 +430,9 @@ export function TalentsGallery() {
                     <h4 className="font-semibold text-gray-800 mb-3 text-sm">
                       {language === 'mr' ? 'कर्मचारी' : 'Staff Members'}
                     </h4>
-                    <ul className="text-gray-700 text-sm space-y-2 max-h-48 overflow-y-auto">
+                    {/* <ul className="text-gray-700 text-sm space-y-2 max-h-48 overflow-y-auto"> */}
+                    <ul className="text-gray-700 text-sm space-y-2 h-40 overflow-y-auto">
+
                       {talent.officers?.map((officer, idx) => (
                         <li key={idx} className="flex items-start gap-2 py-1">
                           <span className="text-green-600 text-lg flex-shrink-0 mt-0.5">›</span>
@@ -446,7 +450,7 @@ export function TalentsGallery() {
           {totalSlides > 1 && (
             <button
               onClick={nextSlide}
-              style={{ marginTop: "650px" }}
+              style={{ marginTop: "575px" }}
               className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 z-10 bg-white rounded-full p-4 shadow-2xl hover:bg-orange-50 border-2 border-gray-300 hover:border-orange-500 transition-all duration-300"
               aria-label={language === 'mr' ? 'पुढील स्लाइड' : 'Next slide'}
             >
