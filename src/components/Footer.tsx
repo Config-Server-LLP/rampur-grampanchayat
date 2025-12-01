@@ -131,7 +131,7 @@ export function Footer({ onNavigate }: FooterProps) {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-orange-400 flex-shrink-0" />
-                <span className="text-gray-300 text-sm">bdo.rajura@maharashtra.gov.in</span>
+                <span className="text-gray-300 text-sm">sangramrampur@gmail.com</span>
               </li>
             </ul>
           </div>
