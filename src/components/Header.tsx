@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
-import { Menu, X, Languages, ChevronDown } from 'lucide-react';
+import { Menu, X, Languages, ChevronDown, Search } from 'lucide-react';
 import { Button } from './ui/button';
 import { useLanguage } from '../contexts/LanguageContext';
+import { SearchResults } from './SearchResults';
 
 interface HeaderProps {
   activeSection: string;
@@ -13,9 +14,13 @@ export function Header({ activeSection, onNavigate }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const [isMobileLanguageOpen, setIsMobileLanguageOpen] = useState(false);
-  const { language, setLanguage, t } = useLanguage();
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  
+  const { language, setLanguage, t, searchTerm, setSearchTerm, searchResults, performSearch } = useLanguage();
+  
   const languageDropdownRef = useRef<HTMLDivElement>(null);
   const mobileLanguageDropdownRef = useRef<HTMLDivElement>(null);
+  const searchRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +33,9 @@ export function Header({ activeSection, onNavigate }: HeaderProps) {
       }
       if (mobileLanguageDropdownRef.current && !mobileLanguageDropdownRef.current.contains(event.target as Node)) {
         setIsMobileLanguageOpen(false);
+      }
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+        setIsSearchOpen(false);
       }
     };
 
@@ -55,6 +63,25 @@ export function Header({ activeSection, onNavigate }: HeaderProps) {
     setIsMobileMenuOpen(false);
   };
 
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setSearchTerm(value);
+    if (value.length > 1) {
+      performSearch(value);
+      setIsSearchOpen(true);
+    } else {
+      setIsSearchOpen(false);
+    }
+  };
+
+  const handleSearchSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchTerm.trim()) {
+      onNavigate('search-results');
+      setIsSearchOpen(false);
+    }
+  };
+
   const languages = [
     { code: 'en', name: 'English', nativeName: 'English' },
     { code: 'mr', name: 'Marathi', nativeName: 'मराठी' },
@@ -73,7 +100,7 @@ export function Header({ activeSection, onNavigate }: HeaderProps) {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
 
-          {/* 🔥 Updated Logo Here */}
+          {/* Logo */}
           <div className="flex items-center gap-4">
             <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden shadow-xl flex items-center justify-center bg-white">
               <img
@@ -104,6 +131,33 @@ export function Header({ activeSection, onNavigate }: HeaderProps) {
                 {item.label}
               </button>
             ))}
+
+            {/* Search Bar */}
+            <div className="relative ml-4" ref={searchRef}>
+              <form onSubmit={handleSearchSubmit} className="relative">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                  <input
+                    type="text"
+                    placeholder={language === 'mr' ? 'शोधा...' : 'Search...'}
+                    value={searchTerm}
+                    onChange={handleSearchChange}
+                    onFocus={() => searchTerm.length > 1 && setIsSearchOpen(true)}
+                    className="w-64 pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  />
+                </div>
+              </form>
+
+              {/* Search Results Dropdown */}
+              {isSearchOpen && searchResults.length > 0 && (
+                <SearchResults 
+                  results={searchResults} 
+                  searchTerm={searchTerm}
+                  onClose={() => setIsSearchOpen(false)}
+                  onNavigate={onNavigate}
+                />
+              )}
+            </div>
 
             {/* Desktop Language Dropdown */}
             <div className="relative ml-4" ref={languageDropdownRef}>
@@ -153,6 +207,14 @@ export function Header({ activeSection, onNavigate }: HeaderProps) {
 
           {/* Mobile Buttons */}
           <div className="lg:hidden flex items-center gap-3">
+            {/* Mobile Search Button */}
+            <button
+              onClick={() => setIsSearchOpen(!isSearchOpen)}
+              className="p-2 hover:bg-gray-100 rounded-md transition-colors"
+            >
+              <Search className="w-6 h-6 text-gray-600" />
+            </button>
+
             <div className="relative" ref={mobileLanguageDropdownRef}>
               <button
                 onClick={() => setIsMobileLanguageOpen(!isMobileLanguageOpen)}
@@ -207,6 +269,37 @@ export function Header({ activeSection, onNavigate }: HeaderProps) {
             </Button>
           </div>
         </div>
+
+        {/* Mobile Search Bar */}
+        {isSearchOpen && (
+          <div className="lg:hidden pb-4 border-t border-gray-200 mt-2">
+            <form onSubmit={handleSearchSubmit} className="relative">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                <input
+                  type="text"
+                  placeholder={language === 'mr' ? 'शोधा...' : 'Search...'}
+                  value={searchTerm}
+                  onChange={handleSearchChange}
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+            </form>
+            
+            {/* Mobile Search Results */}
+            {searchResults.length > 0 && (
+              <div className="mt-2 max-h-60 overflow-y-auto">
+                <SearchResults 
+                  results={searchResults} 
+                  searchTerm={searchTerm}
+                  onClose={() => setIsSearchOpen(false)}
+                  onNavigate={onNavigate}
+                  isMobile={true}
+                />
+              </div>
+            )}
+          </div>
+        )}
 
         {isMobileMenuOpen && (
           <nav className="lg:hidden pb-4 border-t border-gray-200 mt-2">

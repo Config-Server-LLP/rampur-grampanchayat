@@ -414,8 +414,8 @@ export function TalentsGallery() {
 
                 <div className="p-6 flex flex-col flex-grow">
                   {/* Full Description */}
-                  {/* <div className="mb-6"> */}
-                  <div className="mb-6 h-20 overflow-hidden">
+                  {/* The h-20 overflow-hidden line below has been kept from the original to ensure consistent card heights */}
+                  <div className="mb-6 h-20 overflow-hidden"> 
 
                     <h4 className="font-semibold text-gray-800 mb-3 text-sm">
                       {language === 'mr' ? 'विभागाचे वर्णन' : 'Department Description'}
@@ -425,18 +425,18 @@ export function TalentsGallery() {
                     </p>
                   </div>
 
-                  {/* Officers List - Show ALL officers */}
+                  {/* Officers List - Using native list for correct indentation on wrapping text */}
                   <div className="border-t pt-4 flex-grow">
                     <h4 className="font-semibold text-gray-800 mb-3 text-sm">
                       {language === 'mr' ? 'कर्मचारी' : 'Staff Members'}
                     </h4>
-                    {/* <ul className="text-gray-700 text-sm space-y-2 max-h-48 overflow-y-auto"> */}
-                    <ul className="text-gray-700 text-sm space-y-2 h-40 overflow-y-auto">
+                    {/* UPDATED: Added Tailwind list-disc and ml-4 for native bullet points and indentation */}
+                    <ul className="text-gray-700 text-sm space-y-2 h-40 overflow-y-auto **list-disc ml-4**"> 
 
                       {talent.officers?.map((officer, idx) => (
-                        <li key={idx} className="flex items-start gap-2 py-1">
-                          <span className="text-green-600 text-lg flex-shrink-0 mt-0.5">›</span>
-                          <span className="flex-1 text-xs leading-tight">{officer}</span>
+                        <li key={idx} className="**text-xs leading-tight py-1**">
+                          {/* REMOVED: The custom flex and green span for the '›' bullet */}
+                          {officer}
                         </li>
                       ))}
                     </ul>
